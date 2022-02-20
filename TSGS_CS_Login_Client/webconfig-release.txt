@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+    <system.web>
+      <compilation debug="true" targetFramework="4.0" />
+      <httpRuntime executionTimeout="240" maxRequestLength="2048000" />
+    </system.web>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ITSGS_CS_WCF_Service" />
+                <binding name="BasicHttpBinding_ITSGS_MLC_Service" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://websiteserver/TSGS_CS_WCF_Service/TSGS_CS_WCF_Service.TSGS_CS_WCF_Service.svc/TSGS_CS_WCF_Service"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITSGS_CS_WCF_Service"
+                contract="TSGS_CS_WCF_Service.ITSGS_CS_WCF_Service" name="BasicHttpBinding_ITSGS_CS_WCF_Service" />
+            <endpoint address="http://websiteserver/TSGS_MLC_Service/TSGS_MLC_Service.TSGS_MLC_Service.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITSGS_MLC_Service"
+                contract="TSGS_MLC_Service.ITSGS_MLC_Service" name="BasicHttpBinding_ITSGS_MLC_Service" />
+        </client>
+    </system.serviceModel>
+</configuration>

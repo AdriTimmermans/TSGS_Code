@@ -1,0 +1,8 @@
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\bin\Release\WCF_Host.exe.config
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\bin\Release\WCF_Host.exe
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\bin\Release\WCF_Host.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\bin\Release\TSGS_CS_WCF_Service.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\bin\Release\TSGS_CS_WCF_Service.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\obj\Release\WCF_Host.csprojResolveAssemblyReference.cache
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\obj\Release\WCF_Host.exe
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\WCF_Host\obj\Release\WCF_Host.pdb

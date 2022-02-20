@@ -1,0 +1,40 @@
+<html>
+
+<head><!-- $MVD$:app("MicroVision WebExpress","769") -->
+<!-- $MVD$:template("","0","0") -->
+<!-- $MVD$:color("18","ccffff","Custom #1","0") -->
+<!-- $MVD$:color("19","800000","Navy","0") -->
+<!-- $MVD$:color("20","8080","Olive","0") -->
+<!-- $MVD$:fontset("Untitled Font Set 1","Arial") -->
+<!-- $MVD$:fontset("Untitled Font Set 3","Comic Sans MS") -->
+	<link rel="stylesheet" type="text/css" href="../template/modern.css" />
+
+<title>Schaakclub Dordrecht</title>
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<meta NAME="Author" CONTENT="A.L. Timmermans">
+<script LANGUAGE="JavaScript">
+
+function getImage(digit){
+        if (digit == 1) return '../images/1katt041.gif' //These images can be updated
+        if (digit == 2) return '../images/2katt041.gif'
+        if (digit == 3) return '../images/3katt041.gif'
+        if (digit == 4) return '../images/4katt041.gif'
+        if (digit == 5) return '../images/5katt041.gif'
+        if (digit == 6) return '../images/6katt041.gif'
+        if (digit == 7) return '../images/7katt041.gif'
+        if (digit == 8) return '../images/8katt041.gif'
+        if (digit == 9) return '../images/9katt041.gif'
+        if (digit == 0) return '../images/0katt041.gif'
+        if (digit == 10) return '../images/10katt041.gif'
+        if (digit == 11) return '../images/11katt041.gif'
+        }
+
+var timerID = null
+
+var prevday = null
+var prevhour = null
+var prevminute = null
+
+function Nulpunt()
+{
+Offset_Dagen = new Array(600, 365, 334, 306, 275, 245, 214, 184, 153, 122, 92, 61, 31)

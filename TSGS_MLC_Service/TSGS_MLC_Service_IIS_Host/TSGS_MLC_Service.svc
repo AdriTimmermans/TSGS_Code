@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="TSGS_MLC_Service.TSGS_MLC_Service"%>

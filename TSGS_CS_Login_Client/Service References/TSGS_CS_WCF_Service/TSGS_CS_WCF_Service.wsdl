@@ -1,0 +1,3232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TSGS_CS_WCF_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49892/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49892/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49892/?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:49892/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TSGS_CS_WCF_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersBlitz_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersBlitz" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersBlitz_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersBlitzResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetClubBlitzRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubBlitzRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetClubBlitzRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubBlitzRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKFactor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKFactor" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKFactor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKFactorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAcceleration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceleration" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAcceleration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccelerationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SaveBlitzRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBlitzRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SaveBlitzRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBlitzRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_RatingRound_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_RatingRound" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_RatingRound_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_RatingRoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzRatingRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzRatingRanking" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzRatingRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzRatingRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersUniqueBlitz_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersUniqueBlitz" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersUniqueBlitz_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersUniqueBlitzResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzPenaltyPointsCleaned_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzPenaltyPointsCleaned" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzPenaltyPointsCleaned_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzPenaltyPointsCleanedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzPenaltyPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzPenaltyPoints" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzPenaltyPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzPenaltyPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzDisplayPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzDisplayPoints" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetBlitzDisplayPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlitzDisplayPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_MakeImageSourceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeImageSourceData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_MakeImageSourceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeImageSourceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_StringImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:StringImage" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_StringImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StringImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerProfilePictureFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProfilePictureFile" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerProfilePictureFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProfilePictureFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNoPictureFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoPictureFile" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNoPictureFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoPictureFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetTeamData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetTeamData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetTeamPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamPlayers" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetTeamPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_RemoveTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTeam" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_RemoveTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeam" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTeam" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateInteger_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateInteger" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateInteger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateIntegerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateReal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateReal" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateReal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateRealResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateString" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ValidateString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Round_Information_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Round_Information" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Round_Information_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Round_InformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Get_Workflow_Item_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Workflow_Item" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Get_Workflow_Item_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Workflow_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersWithByeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersWithByeList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayersWithByeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersWithByeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRetentionStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetentionStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRetentionStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetentionStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_National_Ratingtable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_National_Ratingtable" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_National_Ratingtable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_National_RatingtableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_FIDE_Ratingtable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_FIDE_Ratingtable" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_FIDE_Ratingtable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_FIDE_RatingtableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetUniquePlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUniquePlayers" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetUniquePlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUniquePlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_KNSB_and_FIDE_Ratings_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_KNSB_and_FIDE_Ratings" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_KNSB_and_FIDE_Ratings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_KNSB_and_FIDE_RatingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PrepareBlitzRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareBlitzRanking" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PrepareBlitzRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareBlitzRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetLastPlayerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastPlayerID" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetLastPlayerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastPlayerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGame" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetStateDescriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateDescriptions" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetStateDescriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateDescriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionTypes" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionType" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Work_Images_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Work_Images" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Work_Images_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Work_ImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Obsolete_Players_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Obsolete_Players" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Obsolete_Players_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Obsolete_PlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_One_Competition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_One_Competition" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_One_Competition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_One_CompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Backup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Backup" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Backup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Create_BackupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllOccurrencesOfOneGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOccurrencesOfOneGame" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllOccurrencesOfOneGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOccurrencesOfOneGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessUser" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessTimeStamp_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessTimeStamp" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAccessTimeStamp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessTimeStampResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAccesData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccesData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAccesData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Count_Sessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:Count_Sessions" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Count_Sessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Count_SessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Fontsize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_Fontsize" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Fontsize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_FontsizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PurgeTableLogging_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeTableLogging" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PurgeTableLogging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeTableLoggingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CTYtoRatingtype_InputMessage">
+    <wsdl:part name="parameters" element="tns:CTYtoRatingtype" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CTYtoRatingtype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CTYtoRatingtypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsentRounds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsentRounds" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsentRounds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsentRoundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetIntegrateWithCompetition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrateWithCompetition" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetIntegrateWithCompetition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrateWithCompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Calculate_New_Pairing_Swiss_InputMessage">
+    <wsdl:part name="parameters" element="tns:Calculate_New_Pairing_Swiss" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Calculate_New_Pairing_Swiss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Calculate_New_Pairing_SwissResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_NoShow_From_Deelnemer_Competition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_NoShow_From_Deelnemer_Competition" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_NoShow_From_Deelnemer_Competition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_NoShow_From_Deelnemer_CompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResultsSwissGameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsSwissGameList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResultsSwissGameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsSwissGameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Swiss_Result_Records_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Swiss_Result_Records" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Swiss_Result_Records_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Swiss_Result_RecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverviewInit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabeticalOverviewInit" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverviewInit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabeticalOverviewInitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabeticalOverview" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabeticalOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeletePlayerListAlphabeticalOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlayerListAlphabeticalOverview" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeletePlayerListAlphabeticalOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlayerListAlphabeticalOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayerListAlphabeticalOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerListAlphabeticalOverview" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayerListAlphabeticalOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerListAlphabeticalOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GenerateHeaderFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateHeaderFile" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GenerateHeaderFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateHeaderFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ChampionsGroupGameNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChampionsGroupGameNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ChampionsGroupGameNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChampionsGroupGameNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetOpenChampionsgroupGames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenChampionsgroupGames" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetOpenChampionsgroupGames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenChampionsgroupGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGGamenrInThisRound_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGGamenrInThisRound" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGGamenrInThisRound_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGGamenrInThisRoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGPartnerInThisRound_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGPartnerInThisRound" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGPartnerInThisRound_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGPartnerInThisRoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListCompetitionOnly_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListCompetitionOnly" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListCompetitionOnly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListCompetitionOnlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateChampionsGroupIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChampionsGroupIndicator" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateChampionsGroupIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChampionsGroupIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PlayerIsCG_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerIsCG" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PlayerIsCG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerIsCGResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAlarmPanelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarmPanelData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAlarmPanelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarmPanelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CountUnhandledCriticalAlarms_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnhandledCriticalAlarms" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CountUnhandledCriticalAlarms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnhandledCriticalAlarmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAlarmPanelIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmPanelIndicator" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateAlarmPanelIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmPanelIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SortMatrix_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortMatrix" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SortMatrix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortMatrixResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCrossTableRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrossTableRow" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCrossTableRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrossTableRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_IPEntryDenied_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPEntryDenied" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_IPEntryDenied_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPEntryDeniedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_WriteLogExceptionTrace_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogExceptionTrace" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_WriteLogExceptionTrace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogExceptionTraceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGTournamentIdFrom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGTournamentIdFrom" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCGTournamentIdFrom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCGTournamentIdFromResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_List_Free_Round_Players_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_Free_Round_Players" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_List_Free_Round_Players_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_Free_Round_PlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_RemovePlayerStatusCalculated_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePlayerStatusCalculated" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_RemovePlayerStatusCalculated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePlayerStatusCalculatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Free_Round_Date_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_Free_Round_Date" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Free_Round_Date_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_Free_Round_DateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateMobileMessageIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMobileMessageIndicator" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateMobileMessageIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMobileMessageIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMobileMessageData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileMessageData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMobileMessageData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileMessageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CountUnhandledMobileMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnhandledMobileMessages" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_CountUnhandledMobileMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnhandledMobileMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionManager" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SaveCompetitionManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompetitionManager" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SaveCompetitionManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompetitionManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRoundNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoundNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRoundNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoundNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetWorkFlowRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkFlowRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetWorkFlowRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkFlowRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberWithdrawn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberWithdrawn" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberWithdrawn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberWithdrawnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberExternal" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberAbsentees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberAbsentees" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberAbsentees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberAbsenteesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberTotal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberTotal" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNumberTotal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllAdversariesStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAdversariesStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllAdversariesStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAdversariesStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsenteeRegisterList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsenteeRegisterList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsenteeRegisterList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsenteeRegisterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsenteeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsenteeList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAbsenteeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsenteeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerName" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerFirstName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerFirstName" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerFirstName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerFirstNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddAbsentee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAbsentee" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddAbsentee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAbsenteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteAbsentees_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAbsentees" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteAbsentees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAbsenteesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Workflow_Item_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_Workflow_Item" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Update_Workflow_Item_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_Workflow_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNoPlayCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoPlayCode" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetNoPlayCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoPlayCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBPlayerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBPlayerList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBPlayerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBPlayerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetFIDEPlayerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDEPlayerList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetFIDEPlayerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDEPlayerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayer" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerFullData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerFullData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerFullData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerFullDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayer" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Initialize_New_Round_InputMessage">
+    <wsdl:part name="parameters" element="tns:Initialize_New_Round" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Initialize_New_Round_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Initialize_New_RoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Calculate_New_Pairing_InputMessage">
+    <wsdl:part name="parameters" element="tns:Calculate_New_Pairing" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Calculate_New_Pairing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Calculate_New_PairingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerStartCompetitionPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerStartCompetitionPoints" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerStartCompetitionPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerStartCompetitionPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerStartRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerStartRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerStartRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerStartRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerRatingInCompetition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerRatingInCompetition" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerRatingInCompetition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerRatingInCompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerPointsInCompetition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerPointsInCompetition" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerPointsInCompetition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerPointsInCompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Worklist_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Worklist" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Worklist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Create_WorklistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKroongroepPartijNummer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKroongroepPartijNummer" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKroongroepPartijNummer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKroongroepPartijNummerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetStringFromAlgemeneInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringFromAlgemeneInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetStringFromAlgemeneInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringFromAlgemeneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_FTP_Basis_Upload_File_InputMessage">
+    <wsdl:part name="parameters" element="tns:FTP_Basis_Upload_File" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_FTP_Basis_Upload_File_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FTP_Basis_Upload_FileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMailAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailAddresses" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMailAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetOneGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneGame" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetOneGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGamesUpdateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamesUpdateList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGamesUpdateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamesUpdateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddManualGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddManualGame" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddManualGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddManualGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Games_From_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Games_From_List" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Games_From_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Games_From_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_IsPlayerInChampiongroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlayerInChampiongroup" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_IsPlayerInChampiongroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlayerInChampiongroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResultsGameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsGameList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResultsGameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsGameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResult" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AllResultsEntered_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllResultsEntered" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AllResultsEntered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllResultsEnteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResults" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Result_Records_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Result_Records" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Create_Result_Records_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Create_Result_RecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AdministrationRatingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdministrationRatingData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AdministrationRatingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdministrationRatingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Templist_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Templist" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Templist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_TemplistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionRankingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionRankingList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionRankingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionRankingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMaxRounds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxRounds" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetMaxRounds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxRoundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Count_Player_Absent_InputMessage">
+    <wsdl:part name="parameters" element="tns:Count_Player_Absent" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Count_Player_Absent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Count_Player_AbsentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionGainRankingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionGainRankingList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionGainRankingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionGainRankingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetELORankingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetELORankingList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetELORankingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetELORankingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ButtonAllowed_InputMessage">
+    <wsdl:part name="parameters" element="tns:ButtonAllowed" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_ButtonAllowed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ButtonAllowedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetIntFromAlgemeneInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntFromAlgemeneInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetIntFromAlgemeneInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntFromAlgemeneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SetIntInAlgemeneInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetIntInAlgemeneInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_SetIntInAlgemeneInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetIntInAlgemeneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabetical_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabetical" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetPlayerListAlphabetical_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerListAlphabeticalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResults" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateOneResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneResult" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateOneResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGeneralInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGeneralInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateGeneralInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGeneralInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateGeneralInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGeneralInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGeneralSwissInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralSwissInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetGeneralSwissInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralSwissInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateGeneralSwissInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGeneralSwissInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateGeneralSwissInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGeneralSwissInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteDeelnemerCompetitieRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDeelnemerCompetitieRecords" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeleteDeelnemerCompetitieRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDeelnemerCompetitieRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerCompetitionRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerCompetitionRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerCompetitionRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerCompetitionRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayerTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerTeam" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdatePlayerTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupPlayerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupPlayerList" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupPlayerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupPlayerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateChampionsGroupPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChampionsGroupPlayer" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateChampionsGroupPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChampionsGroupPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerRoundRobinRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerRoundRobinRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerRoundRobinRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerRoundRobinRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_RoundRobin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_RoundRobin" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_RoundRobin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_RoundRobinResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Upgrade_ChampionsgroupPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:Upgrade_ChampionsgroupPoints" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Upgrade_ChampionsgroupPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Upgrade_ChampionsgroupPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRoundRobinData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoundRobinData" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetRoundRobinData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoundRobinDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupMatchpoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupMatchpoint" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetChampionsgroupMatchpoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionsgroupMatchpointResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllOtherPlayersAlphabetical_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOtherPlayersAlphabetical" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetAllOtherPlayersAlphabetical_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOtherPlayersAlphabeticalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Player_From_CompetitionRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Player_From_CompetitionRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_Player_From_CompetitionRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_Player_From_CompetitionRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetClubRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetClubRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBRating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetKNSBRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKNSBRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetFIDERating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDERating" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetFIDERating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDERatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionPoints" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_GetCompetitionPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_WriteLogLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogLine" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_WriteLogLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PlayerHasResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerHasResults" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_PlayerHasResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerHasResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeletePlayerCompetitionRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlayerCompetitionRecord" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_DeletePlayerCompetitionRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlayerCompetitionRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_BlitzResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_BlitzResults" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_Remove_BlitzResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Remove_BlitzResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerBlitzResultInit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerBlitzResultInit" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_AddPlayerBlitzResultInit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayerBlitzResultInitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateOneBlitzResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneBlitzResult" />
+  </wsdl:message>
+  <wsdl:message name="ITSGS_CS_WCF_Service_UpdateOneBlitzResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneBlitzResultResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITSGS_CS_WCF_Service">
+    <wsdl:operation name="GetPlayersBlitz">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersBlitz" message="tns:ITSGS_CS_WCF_Service_GetPlayersBlitz_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersBlitzResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayersBlitz_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClubBlitzRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubBlitzRating" message="tns:ITSGS_CS_WCF_Service_GetClubBlitzRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubBlitzRatingResponse" message="tns:ITSGS_CS_WCF_Service_GetClubBlitzRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKFactor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKFactor" message="tns:ITSGS_CS_WCF_Service_GetKFactor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKFactorResponse" message="tns:ITSGS_CS_WCF_Service_GetKFactor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAcceleration" message="tns:ITSGS_CS_WCF_Service_GetAcceleration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAccelerationResponse" message="tns:ITSGS_CS_WCF_Service_GetAcceleration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBlitzRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SaveBlitzRating" message="tns:ITSGS_CS_WCF_Service_SaveBlitzRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SaveBlitzRatingResponse" message="tns:ITSGS_CS_WCF_Service_SaveBlitzRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_RatingRound">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RatingRound" message="tns:ITSGS_CS_WCF_Service_Remove_RatingRound_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RatingRoundResponse" message="tns:ITSGS_CS_WCF_Service_Remove_RatingRound_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzRatingRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzRatingRanking" message="tns:ITSGS_CS_WCF_Service_GetBlitzRatingRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzRatingRankingResponse" message="tns:ITSGS_CS_WCF_Service_GetBlitzRatingRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersUniqueBlitz">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersUniqueBlitz" message="tns:ITSGS_CS_WCF_Service_GetPlayersUniqueBlitz_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersUniqueBlitzResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayersUniqueBlitz_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzPenaltyPointsCleaned">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPointsCleaned" message="tns:ITSGS_CS_WCF_Service_GetBlitzPenaltyPointsCleaned_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPointsCleanedResponse" message="tns:ITSGS_CS_WCF_Service_GetBlitzPenaltyPointsCleaned_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzPenaltyPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPoints" message="tns:ITSGS_CS_WCF_Service_GetBlitzPenaltyPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPointsResponse" message="tns:ITSGS_CS_WCF_Service_GetBlitzPenaltyPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzDisplayPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzDisplayPoints" message="tns:ITSGS_CS_WCF_Service_GetBlitzDisplayPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzDisplayPointsResponse" message="tns:ITSGS_CS_WCF_Service_GetBlitzDisplayPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBNumber" message="tns:ITSGS_CS_WCF_Service_GetKNSBNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBNumberResponse" message="tns:ITSGS_CS_WCF_Service_GetKNSBNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeImageSourceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/MakeImageSourceData" message="tns:ITSGS_CS_WCF_Service_MakeImageSourceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/MakeImageSourceDataResponse" message="tns:ITSGS_CS_WCF_Service_MakeImageSourceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StringImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/StringImage" message="tns:ITSGS_CS_WCF_Service_StringImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/StringImageResponse" message="tns:ITSGS_CS_WCF_Service_StringImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProfilePictureFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerProfilePictureFile" message="tns:ITSGS_CS_WCF_Service_GetPlayerProfilePictureFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerProfilePictureFileResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerProfilePictureFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoPictureFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPictureFile" message="tns:ITSGS_CS_WCF_Service_GetNoPictureFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPictureFileResponse" message="tns:ITSGS_CS_WCF_Service_GetNoPictureFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamData" message="tns:ITSGS_CS_WCF_Service_GetTeamData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamDataResponse" message="tns:ITSGS_CS_WCF_Service_GetTeamData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamPlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamPlayers" message="tns:ITSGS_CS_WCF_Service_GetTeamPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamPlayersResponse" message="tns:ITSGS_CS_WCF_Service_GetTeamPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/RemoveTeam" message="tns:ITSGS_CS_WCF_Service_RemoveTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/RemoveTeamResponse" message="tns:ITSGS_CS_WCF_Service_RemoveTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateTeam" message="tns:ITSGS_CS_WCF_Service_UpdateTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateTeamResponse" message="tns:ITSGS_CS_WCF_Service_UpdateTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddTeam" message="tns:ITSGS_CS_WCF_Service_AddTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddTeamResponse" message="tns:ITSGS_CS_WCF_Service_AddTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateInteger">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateInteger" message="tns:ITSGS_CS_WCF_Service_ValidateInteger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateIntegerResponse" message="tns:ITSGS_CS_WCF_Service_ValidateInteger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateReal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateReal" message="tns:ITSGS_CS_WCF_Service_ValidateReal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateRealResponse" message="tns:ITSGS_CS_WCF_Service_ValidateReal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateString">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateString" message="tns:ITSGS_CS_WCF_Service_ValidateString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateStringResponse" message="tns:ITSGS_CS_WCF_Service_ValidateString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Round_Information">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Round_Information" message="tns:ITSGS_CS_WCF_Service_Remove_Round_Information_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Round_InformationResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Round_Information_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Workflow_Item">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Get_Workflow_Item" message="tns:ITSGS_CS_WCF_Service_Get_Workflow_Item_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Get_Workflow_ItemResponse" message="tns:ITSGS_CS_WCF_Service_Get_Workflow_Item_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersWithByeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersWithByeList" message="tns:ITSGS_CS_WCF_Service_GetPlayersWithByeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersWithByeListResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayersWithByeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetentionStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRetentionStatistics" message="tns:ITSGS_CS_WCF_Service_GetRetentionStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRetentionStatisticsResponse" message="tns:ITSGS_CS_WCF_Service_GetRetentionStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_National_Ratingtable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_National_Ratingtable" message="tns:ITSGS_CS_WCF_Service_Update_National_Ratingtable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_National_RatingtableResponse" message="tns:ITSGS_CS_WCF_Service_Update_National_Ratingtable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_FIDE_Ratingtable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_FIDE_Ratingtable" message="tns:ITSGS_CS_WCF_Service_Update_FIDE_Ratingtable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_FIDE_RatingtableResponse" message="tns:ITSGS_CS_WCF_Service_Update_FIDE_Ratingtable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUniquePlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetUniquePlayers" message="tns:ITSGS_CS_WCF_Service_GetUniquePlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetUniquePlayersResponse" message="tns:ITSGS_CS_WCF_Service_GetUniquePlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_KNSB_and_FIDE_Ratings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_KNSB_and_FIDE_Ratings" message="tns:ITSGS_CS_WCF_Service_Update_KNSB_and_FIDE_Ratings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_KNSB_and_FIDE_RatingsResponse" message="tns:ITSGS_CS_WCF_Service_Update_KNSB_and_FIDE_Ratings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareBlitzRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PrepareBlitzRanking" message="tns:ITSGS_CS_WCF_Service_PrepareBlitzRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PrepareBlitzRankingResponse" message="tns:ITSGS_CS_WCF_Service_PrepareBlitzRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupSchedule" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupScheduleResponse" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPlayerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetLastPlayerID" message="tns:ITSGS_CS_WCF_Service_GetLastPlayerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetLastPlayerIDResponse" message="tns:ITSGS_CS_WCF_Service_GetLastPlayerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddGame" message="tns:ITSGS_CS_WCF_Service_AddGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddGameResponse" message="tns:ITSGS_CS_WCF_Service_AddGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateDescriptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetStateDescriptions" message="tns:ITSGS_CS_WCF_Service_GetStateDescriptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetStateDescriptionsResponse" message="tns:ITSGS_CS_WCF_Service_GetStateDescriptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionTypes" message="tns:ITSGS_CS_WCF_Service_GetCompetitionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionTypesResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionType" message="tns:ITSGS_CS_WCF_Service_GetCompetitionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionTypeResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Work_Images">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Work_Images" message="tns:ITSGS_CS_WCF_Service_Remove_Work_Images_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Work_ImagesResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Work_Images_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Obsolete_Players">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Obsolete_Players" message="tns:ITSGS_CS_WCF_Service_Remove_Obsolete_Players_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Obsolete_PlayersResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Obsolete_Players_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_One_Competition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_One_Competition" message="tns:ITSGS_CS_WCF_Service_Remove_One_Competition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_One_CompetitionResponse" message="tns:ITSGS_CS_WCF_Service_Remove_One_Competition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create_Backup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Backup" message="tns:ITSGS_CS_WCF_Service_Create_Backup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_BackupResponse" message="tns:ITSGS_CS_WCF_Service_Create_Backup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOccurrencesOfOneGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOccurrencesOfOneGame" message="tns:ITSGS_CS_WCF_Service_GetAllOccurrencesOfOneGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOccurrencesOfOneGameResponse" message="tns:ITSGS_CS_WCF_Service_GetAllOccurrencesOfOneGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessUser" message="tns:ITSGS_CS_WCF_Service_UpdateAccessUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessUserResponse" message="tns:ITSGS_CS_WCF_Service_UpdateAccessUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessNumber" message="tns:ITSGS_CS_WCF_Service_UpdateAccessNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessNumberResponse" message="tns:ITSGS_CS_WCF_Service_UpdateAccessNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessTimeStamp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessTimeStamp" message="tns:ITSGS_CS_WCF_Service_UpdateAccessTimeStamp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessTimeStampResponse" message="tns:ITSGS_CS_WCF_Service_UpdateAccessTimeStamp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccesData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAccesData" message="tns:ITSGS_CS_WCF_Service_GetAccesData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAccesDataResponse" message="tns:ITSGS_CS_WCF_Service_GetAccesData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Count_Sessions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Count_Sessions" message="tns:ITSGS_CS_WCF_Service_Count_Sessions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Count_SessionsResponse" message="tns:ITSGS_CS_WCF_Service_Count_Sessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Fontsize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Fontsize" message="tns:ITSGS_CS_WCF_Service_Update_Fontsize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_FontsizeResponse" message="tns:ITSGS_CS_WCF_Service_Update_Fontsize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeTableLogging">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PurgeTableLogging" message="tns:ITSGS_CS_WCF_Service_PurgeTableLogging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PurgeTableLoggingResponse" message="tns:ITSGS_CS_WCF_Service_PurgeTableLogging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CTYtoRatingtype">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CTYtoRatingtype" message="tns:ITSGS_CS_WCF_Service_CTYtoRatingtype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CTYtoRatingtypeResponse" message="tns:ITSGS_CS_WCF_Service_CTYtoRatingtype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsentRounds">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsentRounds" message="tns:ITSGS_CS_WCF_Service_GetAbsentRounds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsentRoundsResponse" message="tns:ITSGS_CS_WCF_Service_GetAbsentRounds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrateWithCompetition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntegrateWithCompetition" message="tns:ITSGS_CS_WCF_Service_GetIntegrateWithCompetition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntegrateWithCompetitionResponse" message="tns:ITSGS_CS_WCF_Service_GetIntegrateWithCompetition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Calculate_New_Pairing_Swiss">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_Pairing_Swiss" message="tns:ITSGS_CS_WCF_Service_Calculate_New_Pairing_Swiss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_Pairing_SwissResponse" message="tns:ITSGS_CS_WCF_Service_Calculate_New_Pairing_Swiss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_NoShow_From_Deelnemer_Competition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_NoShow_From_Deelnemer_Competition" message="tns:ITSGS_CS_WCF_Service_Remove_NoShow_From_Deelnemer_Competition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_NoShow_From_Deelnemer_CompetitionResponse" message="tns:ITSGS_CS_WCF_Service_Remove_NoShow_From_Deelnemer_Competition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsSwissGameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsSwissGameList" message="tns:ITSGS_CS_WCF_Service_GetResultsSwissGameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsSwissGameListResponse" message="tns:ITSGS_CS_WCF_Service_GetResultsSwissGameList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create_Swiss_Result_Records">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Swiss_Result_Records" message="tns:ITSGS_CS_WCF_Service_Create_Swiss_Result_Records_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Swiss_Result_RecordsResponse" message="tns:ITSGS_CS_WCF_Service_Create_Swiss_Result_Records_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabeticalOverviewInit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverviewInit" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverviewInit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverviewInitResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverviewInit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabeticalOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverview" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverviewResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabeticalOverview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerListAlphabeticalOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerListAlphabeticalOverview" message="tns:ITSGS_CS_WCF_Service_DeletePlayerListAlphabeticalOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerListAlphabeticalOverviewResponse" message="tns:ITSGS_CS_WCF_Service_DeletePlayerListAlphabeticalOverview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerListAlphabeticalOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerListAlphabeticalOverview" message="tns:ITSGS_CS_WCF_Service_UpdatePlayerListAlphabeticalOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerListAlphabeticalOverviewResponse" message="tns:ITSGS_CS_WCF_Service_UpdatePlayerListAlphabeticalOverview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateHeaderFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GenerateHeaderFile" message="tns:ITSGS_CS_WCF_Service_GenerateHeaderFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GenerateHeaderFileResponse" message="tns:ITSGS_CS_WCF_Service_GenerateHeaderFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChampionsGroupGameNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ChampionsGroupGameNumber" message="tns:ITSGS_CS_WCF_Service_ChampionsGroupGameNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ChampionsGroupGameNumberResponse" message="tns:ITSGS_CS_WCF_Service_ChampionsGroupGameNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenChampionsgroupGames">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetOpenChampionsgroupGames" message="tns:ITSGS_CS_WCF_Service_GetOpenChampionsgroupGames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetOpenChampionsgroupGamesResponse" message="tns:ITSGS_CS_WCF_Service_GetOpenChampionsgroupGames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCGGamenrInThisRound">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGGamenrInThisRound" message="tns:ITSGS_CS_WCF_Service_GetCGGamenrInThisRound_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGGamenrInThisRoundResponse" message="tns:ITSGS_CS_WCF_Service_GetCGGamenrInThisRound_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCGPartnerInThisRound">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGPartnerInThisRound" message="tns:ITSGS_CS_WCF_Service_GetCGPartnerInThisRound_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGPartnerInThisRoundResponse" message="tns:ITSGS_CS_WCF_Service_GetCGPartnerInThisRound_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListCompetitionOnly">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListCompetitionOnly" message="tns:ITSGS_CS_WCF_Service_GetPlayerListCompetitionOnly_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListCompetitionOnlyResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerListCompetitionOnly_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChampionsGroupIndicator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupIndicator" message="tns:ITSGS_CS_WCF_Service_UpdateChampionsGroupIndicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupIndicatorResponse" message="tns:ITSGS_CS_WCF_Service_UpdateChampionsGroupIndicator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayerIsCG">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerIsCG" message="tns:ITSGS_CS_WCF_Service_PlayerIsCG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerIsCGResponse" message="tns:ITSGS_CS_WCF_Service_PlayerIsCG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmPanelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAlarmPanelData" message="tns:ITSGS_CS_WCF_Service_GetAlarmPanelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAlarmPanelDataResponse" message="tns:ITSGS_CS_WCF_Service_GetAlarmPanelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountUnhandledCriticalAlarms">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledCriticalAlarms" message="tns:ITSGS_CS_WCF_Service_CountUnhandledCriticalAlarms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledCriticalAlarmsResponse" message="tns:ITSGS_CS_WCF_Service_CountUnhandledCriticalAlarms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarmPanelIndicator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAlarmPanelIndicator" message="tns:ITSGS_CS_WCF_Service_UpdateAlarmPanelIndicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAlarmPanelIndicatorResponse" message="tns:ITSGS_CS_WCF_Service_UpdateAlarmPanelIndicator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortMatrix">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SortMatrix" message="tns:ITSGS_CS_WCF_Service_SortMatrix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SortMatrixResponse" message="tns:ITSGS_CS_WCF_Service_SortMatrix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrossTableRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCrossTableRow" message="tns:ITSGS_CS_WCF_Service_GetCrossTableRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCrossTableRowResponse" message="tns:ITSGS_CS_WCF_Service_GetCrossTableRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPEntryDenied">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/IPEntryDenied" message="tns:ITSGS_CS_WCF_Service_IPEntryDenied_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/IPEntryDeniedResponse" message="tns:ITSGS_CS_WCF_Service_IPEntryDenied_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogExceptionTrace">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogExceptionTrace" message="tns:ITSGS_CS_WCF_Service_WriteLogExceptionTrace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogExceptionTraceResponse" message="tns:ITSGS_CS_WCF_Service_WriteLogExceptionTrace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCGTournamentIdFrom">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGTournamentIdFrom" message="tns:ITSGS_CS_WCF_Service_GetCGTournamentIdFrom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGTournamentIdFromResponse" message="tns:ITSGS_CS_WCF_Service_GetCGTournamentIdFrom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Free_Round_Players">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/List_Free_Round_Players" message="tns:ITSGS_CS_WCF_Service_List_Free_Round_Players_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/List_Free_Round_PlayersResponse" message="tns:ITSGS_CS_WCF_Service_List_Free_Round_Players_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePlayerStatusCalculated">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/RemovePlayerStatusCalculated" message="tns:ITSGS_CS_WCF_Service_RemovePlayerStatusCalculated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/RemovePlayerStatusCalculatedResponse" message="tns:ITSGS_CS_WCF_Service_RemovePlayerStatusCalculated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Free_Round_Date">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Free_Round_Date" message="tns:ITSGS_CS_WCF_Service_Update_Free_Round_Date_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Free_Round_DateResponse" message="tns:ITSGS_CS_WCF_Service_Update_Free_Round_Date_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMobileMessageIndicator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateMobileMessageIndicator" message="tns:ITSGS_CS_WCF_Service_UpdateMobileMessageIndicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateMobileMessageIndicatorResponse" message="tns:ITSGS_CS_WCF_Service_UpdateMobileMessageIndicator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileMessageData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMobileMessageData" message="tns:ITSGS_CS_WCF_Service_GetMobileMessageData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMobileMessageDataResponse" message="tns:ITSGS_CS_WCF_Service_GetMobileMessageData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountUnhandledMobileMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledMobileMessages" message="tns:ITSGS_CS_WCF_Service_CountUnhandledMobileMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledMobileMessagesResponse" message="tns:ITSGS_CS_WCF_Service_CountUnhandledMobileMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionManager" message="tns:ITSGS_CS_WCF_Service_GetCompetitionManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionManagerResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompetitionManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SaveCompetitionManager" message="tns:ITSGS_CS_WCF_Service_SaveCompetitionManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SaveCompetitionManagerResponse" message="tns:ITSGS_CS_WCF_Service_SaveCompetitionManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionList" message="tns:ITSGS_CS_WCF_Service_GetCompetitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionListResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoundNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundNumber" message="tns:ITSGS_CS_WCF_Service_GetRoundNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundNumberResponse" message="tns:ITSGS_CS_WCF_Service_GetRoundNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkFlowRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetWorkFlowRecord" message="tns:ITSGS_CS_WCF_Service_GetWorkFlowRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetWorkFlowRecordResponse" message="tns:ITSGS_CS_WCF_Service_GetWorkFlowRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberWithdrawn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberWithdrawn" message="tns:ITSGS_CS_WCF_Service_GetNumberWithdrawn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberWithdrawnResponse" message="tns:ITSGS_CS_WCF_Service_GetNumberWithdrawn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberExternal" message="tns:ITSGS_CS_WCF_Service_GetNumberExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberExternalResponse" message="tns:ITSGS_CS_WCF_Service_GetNumberExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberAbsentees">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberAbsentees" message="tns:ITSGS_CS_WCF_Service_GetNumberAbsentees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberAbsenteesResponse" message="tns:ITSGS_CS_WCF_Service_GetNumberAbsentees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberTotal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberTotal" message="tns:ITSGS_CS_WCF_Service_GetNumberTotal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberTotalResponse" message="tns:ITSGS_CS_WCF_Service_GetNumberTotal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerList" message="tns:ITSGS_CS_WCF_Service_GetPlayerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAdversariesStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllAdversariesStatistics" message="tns:ITSGS_CS_WCF_Service_GetAllAdversariesStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllAdversariesStatisticsResponse" message="tns:ITSGS_CS_WCF_Service_GetAllAdversariesStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsenteeRegisterList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeRegisterList" message="tns:ITSGS_CS_WCF_Service_GetAbsenteeRegisterList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeRegisterListResponse" message="tns:ITSGS_CS_WCF_Service_GetAbsenteeRegisterList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsenteeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeList" message="tns:ITSGS_CS_WCF_Service_GetAbsenteeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeListResponse" message="tns:ITSGS_CS_WCF_Service_GetAbsenteeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerName" message="tns:ITSGS_CS_WCF_Service_GetPlayerName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerNameResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFirstName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFirstName" message="tns:ITSGS_CS_WCF_Service_GetPlayerFirstName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFirstNameResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerFirstName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAbsentee">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddAbsentee" message="tns:ITSGS_CS_WCF_Service_AddAbsentee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddAbsenteeResponse" message="tns:ITSGS_CS_WCF_Service_AddAbsentee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAbsentees">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteAbsentees" message="tns:ITSGS_CS_WCF_Service_DeleteAbsentees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteAbsenteesResponse" message="tns:ITSGS_CS_WCF_Service_DeleteAbsentees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Workflow_Item">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Workflow_Item" message="tns:ITSGS_CS_WCF_Service_Update_Workflow_Item_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Workflow_ItemResponse" message="tns:ITSGS_CS_WCF_Service_Update_Workflow_Item_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoPlayCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPlayCode" message="tns:ITSGS_CS_WCF_Service_GetNoPlayCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPlayCodeResponse" message="tns:ITSGS_CS_WCF_Service_GetNoPlayCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBPlayerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBPlayerList" message="tns:ITSGS_CS_WCF_Service_GetKNSBPlayerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBPlayerListResponse" message="tns:ITSGS_CS_WCF_Service_GetKNSBPlayerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDEPlayerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDEPlayerList" message="tns:ITSGS_CS_WCF_Service_GetFIDEPlayerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDEPlayerListResponse" message="tns:ITSGS_CS_WCF_Service_GetFIDEPlayerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayer" message="tns:ITSGS_CS_WCF_Service_AddPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerResponse" message="tns:ITSGS_CS_WCF_Service_AddPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFullData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFullData" message="tns:ITSGS_CS_WCF_Service_GetPlayerFullData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFullDataResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerFullData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayer" message="tns:ITSGS_CS_WCF_Service_UpdatePlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerResponse" message="tns:ITSGS_CS_WCF_Service_UpdatePlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Initialize_New_Round">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Initialize_New_Round" message="tns:ITSGS_CS_WCF_Service_Initialize_New_Round_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Initialize_New_RoundResponse" message="tns:ITSGS_CS_WCF_Service_Initialize_New_Round_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Calculate_New_Pairing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_Pairing" message="tns:ITSGS_CS_WCF_Service_Calculate_New_Pairing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_PairingResponse" message="tns:ITSGS_CS_WCF_Service_Calculate_New_Pairing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStartCompetitionPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartCompetitionPoints" message="tns:ITSGS_CS_WCF_Service_GetPlayerStartCompetitionPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartCompetitionPointsResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerStartCompetitionPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStartRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartRating" message="tns:ITSGS_CS_WCF_Service_GetPlayerStartRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartRatingResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerStartRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerRatingInCompetition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerRatingInCompetition" message="tns:ITSGS_CS_WCF_Service_GetPlayerRatingInCompetition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerRatingInCompetitionResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerRatingInCompetition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerPointsInCompetition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerPointsInCompetition" message="tns:ITSGS_CS_WCF_Service_GetPlayerPointsInCompetition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerPointsInCompetitionResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerPointsInCompetition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create_Worklist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Worklist" message="tns:ITSGS_CS_WCF_Service_Create_Worklist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_WorklistResponse" message="tns:ITSGS_CS_WCF_Service_Create_Worklist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKroongroepPartijNummer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKroongroepPartijNummer" message="tns:ITSGS_CS_WCF_Service_GetKroongroepPartijNummer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKroongroepPartijNummerResponse" message="tns:ITSGS_CS_WCF_Service_GetKroongroepPartijNummer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGameList" message="tns:ITSGS_CS_WCF_Service_GetGameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGameListResponse" message="tns:ITSGS_CS_WCF_Service_GetGameList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringFromAlgemeneInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetStringFromAlgemeneInfo" message="tns:ITSGS_CS_WCF_Service_GetStringFromAlgemeneInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetStringFromAlgemeneInfoResponse" message="tns:ITSGS_CS_WCF_Service_GetStringFromAlgemeneInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FTP_Basis_Upload_File">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/FTP_Basis_Upload_File" message="tns:ITSGS_CS_WCF_Service_FTP_Basis_Upload_File_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/FTP_Basis_Upload_FileResponse" message="tns:ITSGS_CS_WCF_Service_FTP_Basis_Upload_File_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMailAddresses" message="tns:ITSGS_CS_WCF_Service_GetMailAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMailAddressesResponse" message="tns:ITSGS_CS_WCF_Service_GetMailAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetOneGame" message="tns:ITSGS_CS_WCF_Service_GetOneGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetOneGameResponse" message="tns:ITSGS_CS_WCF_Service_GetOneGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGamesUpdateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGamesUpdateList" message="tns:ITSGS_CS_WCF_Service_GetGamesUpdateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGamesUpdateListResponse" message="tns:ITSGS_CS_WCF_Service_GetGamesUpdateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddManualGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddManualGame" message="tns:ITSGS_CS_WCF_Service_AddManualGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddManualGameResponse" message="tns:ITSGS_CS_WCF_Service_AddManualGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Games_From_List">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Games_From_List" message="tns:ITSGS_CS_WCF_Service_Remove_Games_From_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Games_From_ListResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Games_From_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPlayerInChampiongroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/IsPlayerInChampiongroup" message="tns:ITSGS_CS_WCF_Service_IsPlayerInChampiongroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/IsPlayerInChampiongroupResponse" message="tns:ITSGS_CS_WCF_Service_IsPlayerInChampiongroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsGameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsGameList" message="tns:ITSGS_CS_WCF_Service_GetResultsGameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsGameListResponse" message="tns:ITSGS_CS_WCF_Service_GetResultsGameList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateResult" message="tns:ITSGS_CS_WCF_Service_UpdateResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateResultResponse" message="tns:ITSGS_CS_WCF_Service_UpdateResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllResultsEntered">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AllResultsEntered" message="tns:ITSGS_CS_WCF_Service_AllResultsEntered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AllResultsEnteredResponse" message="tns:ITSGS_CS_WCF_Service_AllResultsEntered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteResults" message="tns:ITSGS_CS_WCF_Service_DeleteResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteResultsResponse" message="tns:ITSGS_CS_WCF_Service_DeleteResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create_Result_Records">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Result_Records" message="tns:ITSGS_CS_WCF_Service_Create_Result_Records_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Result_RecordsResponse" message="tns:ITSGS_CS_WCF_Service_Create_Result_Records_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrationRatingData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AdministrationRatingData" message="tns:ITSGS_CS_WCF_Service_AdministrationRatingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AdministrationRatingDataResponse" message="tns:ITSGS_CS_WCF_Service_AdministrationRatingData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Templist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Templist" message="tns:ITSGS_CS_WCF_Service_Remove_Templist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_TemplistResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Templist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionRankingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionRankingList" message="tns:ITSGS_CS_WCF_Service_GetCompetitionRankingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionRankingListResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionRankingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRounds">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMaxRounds" message="tns:ITSGS_CS_WCF_Service_GetMaxRounds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetMaxRoundsResponse" message="tns:ITSGS_CS_WCF_Service_GetMaxRounds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Count_Player_Absent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Count_Player_Absent" message="tns:ITSGS_CS_WCF_Service_Count_Player_Absent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Count_Player_AbsentResponse" message="tns:ITSGS_CS_WCF_Service_Count_Player_Absent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionGainRankingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionGainRankingList" message="tns:ITSGS_CS_WCF_Service_GetCompetitionGainRankingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionGainRankingListResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionGainRankingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetELORankingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetELORankingList" message="tns:ITSGS_CS_WCF_Service_GetELORankingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetELORankingListResponse" message="tns:ITSGS_CS_WCF_Service_GetELORankingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ButtonAllowed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ButtonAllowed" message="tns:ITSGS_CS_WCF_Service_ButtonAllowed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/ButtonAllowedResponse" message="tns:ITSGS_CS_WCF_Service_ButtonAllowed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntFromAlgemeneInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntFromAlgemeneInfo" message="tns:ITSGS_CS_WCF_Service_GetIntFromAlgemeneInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntFromAlgemeneInfoResponse" message="tns:ITSGS_CS_WCF_Service_GetIntFromAlgemeneInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetIntInAlgemeneInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SetIntInAlgemeneInfo" message="tns:ITSGS_CS_WCF_Service_SetIntInAlgemeneInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/SetIntInAlgemeneInfoResponse" message="tns:ITSGS_CS_WCF_Service_SetIntInAlgemeneInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabetical">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabetical" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabetical_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalResponse" message="tns:ITSGS_CS_WCF_Service_GetPlayerListAlphabetical_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResults" message="tns:ITSGS_CS_WCF_Service_GetResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsResponse" message="tns:ITSGS_CS_WCF_Service_GetResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneResult" message="tns:ITSGS_CS_WCF_Service_UpdateOneResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneResultResponse" message="tns:ITSGS_CS_WCF_Service_UpdateOneResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralInfo" message="tns:ITSGS_CS_WCF_Service_GetGeneralInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralInfoResponse" message="tns:ITSGS_CS_WCF_Service_GetGeneralInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGeneralInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralInfo" message="tns:ITSGS_CS_WCF_Service_UpdateGeneralInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralInfoResponse" message="tns:ITSGS_CS_WCF_Service_UpdateGeneralInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralSwissInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralSwissInfo" message="tns:ITSGS_CS_WCF_Service_GetGeneralSwissInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralSwissInfoResponse" message="tns:ITSGS_CS_WCF_Service_GetGeneralSwissInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGeneralSwissInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralSwissInfo" message="tns:ITSGS_CS_WCF_Service_UpdateGeneralSwissInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralSwissInfoResponse" message="tns:ITSGS_CS_WCF_Service_UpdateGeneralSwissInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDeelnemerCompetitieRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteDeelnemerCompetitieRecords" message="tns:ITSGS_CS_WCF_Service_DeleteDeelnemerCompetitieRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteDeelnemerCompetitieRecordsResponse" message="tns:ITSGS_CS_WCF_Service_DeleteDeelnemerCompetitieRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerCompetitionRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerCompetitionRecord" message="tns:ITSGS_CS_WCF_Service_AddPlayerCompetitionRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerCompetitionRecordResponse" message="tns:ITSGS_CS_WCF_Service_AddPlayerCompetitionRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerTeam" message="tns:ITSGS_CS_WCF_Service_UpdatePlayerTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerTeamResponse" message="tns:ITSGS_CS_WCF_Service_UpdatePlayerTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupPlayerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupPlayerList" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupPlayerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupPlayerListResponse" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupPlayerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChampionsGroupPlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupPlayer" message="tns:ITSGS_CS_WCF_Service_UpdateChampionsGroupPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupPlayerResponse" message="tns:ITSGS_CS_WCF_Service_UpdateChampionsGroupPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerRoundRobinRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerRoundRobinRecord" message="tns:ITSGS_CS_WCF_Service_AddPlayerRoundRobinRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerRoundRobinRecordResponse" message="tns:ITSGS_CS_WCF_Service_AddPlayerRoundRobinRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_RoundRobin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RoundRobin" message="tns:ITSGS_CS_WCF_Service_Remove_RoundRobin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RoundRobinResponse" message="tns:ITSGS_CS_WCF_Service_Remove_RoundRobin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Upgrade_ChampionsgroupPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Upgrade_ChampionsgroupPoints" message="tns:ITSGS_CS_WCF_Service_Upgrade_ChampionsgroupPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Upgrade_ChampionsgroupPointsResponse" message="tns:ITSGS_CS_WCF_Service_Upgrade_ChampionsgroupPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoundRobinData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundRobinData" message="tns:ITSGS_CS_WCF_Service_GetRoundRobinData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundRobinDataResponse" message="tns:ITSGS_CS_WCF_Service_GetRoundRobinData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupMatchpoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupMatchpoint" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupMatchpoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupMatchpointResponse" message="tns:ITSGS_CS_WCF_Service_GetChampionsgroupMatchpoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOtherPlayersAlphabetical">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOtherPlayersAlphabetical" message="tns:ITSGS_CS_WCF_Service_GetAllOtherPlayersAlphabetical_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOtherPlayersAlphabeticalResponse" message="tns:ITSGS_CS_WCF_Service_GetAllOtherPlayersAlphabetical_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Player_From_CompetitionRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Player_From_CompetitionRating" message="tns:ITSGS_CS_WCF_Service_Remove_Player_From_CompetitionRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Player_From_CompetitionRatingResponse" message="tns:ITSGS_CS_WCF_Service_Remove_Player_From_CompetitionRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClubRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubRating" message="tns:ITSGS_CS_WCF_Service_GetClubRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubRatingResponse" message="tns:ITSGS_CS_WCF_Service_GetClubRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBRating" message="tns:ITSGS_CS_WCF_Service_GetKNSBRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBRatingResponse" message="tns:ITSGS_CS_WCF_Service_GetKNSBRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDERating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDERating" message="tns:ITSGS_CS_WCF_Service_GetFIDERating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDERatingResponse" message="tns:ITSGS_CS_WCF_Service_GetFIDERating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionPoints" message="tns:ITSGS_CS_WCF_Service_GetCompetitionPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionPointsResponse" message="tns:ITSGS_CS_WCF_Service_GetCompetitionPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogLine" message="tns:ITSGS_CS_WCF_Service_WriteLogLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogLineResponse" message="tns:ITSGS_CS_WCF_Service_WriteLogLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayerHasResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerHasResults" message="tns:ITSGS_CS_WCF_Service_PlayerHasResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerHasResultsResponse" message="tns:ITSGS_CS_WCF_Service_PlayerHasResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerCompetitionRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerCompetitionRecord" message="tns:ITSGS_CS_WCF_Service_DeletePlayerCompetitionRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerCompetitionRecordResponse" message="tns:ITSGS_CS_WCF_Service_DeletePlayerCompetitionRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove_BlitzResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_BlitzResults" message="tns:ITSGS_CS_WCF_Service_Remove_BlitzResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_BlitzResultsResponse" message="tns:ITSGS_CS_WCF_Service_Remove_BlitzResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerBlitzResultInit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerBlitzResultInit" message="tns:ITSGS_CS_WCF_Service_AddPlayerBlitzResultInit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerBlitzResultInitResponse" message="tns:ITSGS_CS_WCF_Service_AddPlayerBlitzResultInit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneBlitzResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneBlitzResult" message="tns:ITSGS_CS_WCF_Service_UpdateOneBlitzResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneBlitzResultResponse" message="tns:ITSGS_CS_WCF_Service_UpdateOneBlitzResult_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITSGS_CS_WCF_Service" type="tns:ITSGS_CS_WCF_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPlayersBlitz">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersBlitz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClubBlitzRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubBlitzRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKFactor">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetKFactor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleration">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAcceleration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBlitzRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/SaveBlitzRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_RatingRound">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RatingRound" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzRatingRanking">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzRatingRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersUniqueBlitz">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersUniqueBlitz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzPenaltyPointsCleaned">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPointsCleaned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzPenaltyPoints">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzPenaltyPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlitzDisplayPoints">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetBlitzDisplayPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBNumber">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeImageSourceData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/MakeImageSourceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StringImage">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/StringImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProfilePictureFile">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerProfilePictureFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoPictureFile">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPictureFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamPlayers">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetTeamPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTeam">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/RemoveTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeam">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTeam">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateInteger">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateInteger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateReal">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateReal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateString">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/ValidateString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Round_Information">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Round_Information" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Workflow_Item">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Get_Workflow_Item" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersWithByeList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayersWithByeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetentionStatistics">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetRetentionStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_National_Ratingtable">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_National_Ratingtable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_FIDE_Ratingtable">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_FIDE_Ratingtable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniquePlayers">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetUniquePlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_KNSB_and_FIDE_Ratings">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_KNSB_and_FIDE_Ratings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareBlitzRanking">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/PrepareBlitzRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupSchedule">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPlayerID">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetLastPlayerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateDescriptions">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetStateDescriptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionTypes">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionType">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Work_Images">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Work_Images" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Obsolete_Players">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Obsolete_Players" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_One_Competition">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_One_Competition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create_Backup">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Backup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOccurrencesOfOneGame">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOccurrencesOfOneGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessUser">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessNumber">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccessTimeStamp">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAccessTimeStamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccesData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAccesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Count_Sessions">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Count_Sessions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Fontsize">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Fontsize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeTableLogging">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/PurgeTableLogging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTYtoRatingtype">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/CTYtoRatingtype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsentRounds">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsentRounds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrateWithCompetition">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntegrateWithCompetition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calculate_New_Pairing_Swiss">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_Pairing_Swiss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_NoShow_From_Deelnemer_Competition">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_NoShow_From_Deelnemer_Competition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsSwissGameList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsSwissGameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create_Swiss_Result_Records">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Swiss_Result_Records" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabeticalOverviewInit">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverviewInit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabeticalOverview">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabeticalOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerListAlphabeticalOverview">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerListAlphabeticalOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerListAlphabeticalOverview">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerListAlphabeticalOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateHeaderFile">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GenerateHeaderFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChampionsGroupGameNumber">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/ChampionsGroupGameNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenChampionsgroupGames">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetOpenChampionsgroupGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCGGamenrInThisRound">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGGamenrInThisRound" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCGPartnerInThisRound">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGPartnerInThisRound" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListCompetitionOnly">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListCompetitionOnly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChampionsGroupIndicator">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupIndicator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayerIsCG">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerIsCG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmPanelData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAlarmPanelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountUnhandledCriticalAlarms">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledCriticalAlarms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarmPanelIndicator">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateAlarmPanelIndicator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortMatrix">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/SortMatrix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrossTableRow">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCrossTableRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPEntryDenied">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/IPEntryDenied" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogExceptionTrace">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogExceptionTrace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCGTournamentIdFrom">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCGTournamentIdFrom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Free_Round_Players">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/List_Free_Round_Players" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePlayerStatusCalculated">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/RemovePlayerStatusCalculated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Free_Round_Date">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Free_Round_Date" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMobileMessageIndicator">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateMobileMessageIndicator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileMessageData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetMobileMessageData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountUnhandledMobileMessages">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/CountUnhandledMobileMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionManager">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompetitionManager">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/SaveCompetitionManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoundNumber">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkFlowRecord">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetWorkFlowRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberWithdrawn">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberWithdrawn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberExternal">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberExternal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberAbsentees">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberAbsentees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberTotal">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNumberTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAdversariesStatistics">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllAdversariesStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsenteeRegisterList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeRegisterList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsenteeList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAbsenteeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerName">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFirstName">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFirstName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAbsentee">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddAbsentee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAbsentees">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteAbsentees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Workflow_Item">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Update_Workflow_Item" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoPlayCode">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetNoPlayCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBPlayerList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBPlayerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDEPlayerList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDEPlayerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayer">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFullData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerFullData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayer">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Initialize_New_Round">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Initialize_New_Round" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calculate_New_Pairing">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Calculate_New_Pairing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStartCompetitionPoints">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartCompetitionPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStartRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerStartRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerRatingInCompetition">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerRatingInCompetition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerPointsInCompetition">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerPointsInCompetition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create_Worklist">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Worklist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKroongroepPartijNummer">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetKroongroepPartijNummer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetGameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringFromAlgemeneInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetStringFromAlgemeneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FTP_Basis_Upload_File">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/FTP_Basis_Upload_File" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailAddresses">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetMailAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneGame">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetOneGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGamesUpdateList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetGamesUpdateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddManualGame">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddManualGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Games_From_List">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Games_From_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPlayerInChampiongroup">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/IsPlayerInChampiongroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsGameList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetResultsGameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResult">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllResultsEntered">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AllResultsEntered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResults">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create_Result_Records">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Create_Result_Records" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrationRatingData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AdministrationRatingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Templist">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Templist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionRankingList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionRankingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRounds">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetMaxRounds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Count_Player_Absent">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Count_Player_Absent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionGainRankingList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionGainRankingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetELORankingList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetELORankingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ButtonAllowed">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/ButtonAllowed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntFromAlgemeneInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetIntFromAlgemeneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetIntInAlgemeneInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/SetIntInAlgemeneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerListAlphabetical">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetPlayerListAlphabetical" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResults">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneResult">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGeneralInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralSwissInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetGeneralSwissInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGeneralSwissInfo">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateGeneralSwissInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDeelnemerCompetitieRecords">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/DeleteDeelnemerCompetitieRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerCompetitionRecord">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerCompetitionRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerTeam">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdatePlayerTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupPlayerList">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupPlayerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChampionsGroupPlayer">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateChampionsGroupPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerRoundRobinRecord">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerRoundRobinRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_RoundRobin">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_RoundRobin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upgrade_ChampionsgroupPoints">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Upgrade_ChampionsgroupPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoundRobinData">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetRoundRobinData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionsgroupMatchpoint">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetChampionsgroupMatchpoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOtherPlayersAlphabetical">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetAllOtherPlayersAlphabetical" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_Player_From_CompetitionRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_Player_From_CompetitionRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClubRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetClubRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKNSBRating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetKNSBRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDERating">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetFIDERating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitionPoints">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/GetCompetitionPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogLine">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/WriteLogLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayerHasResults">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/PlayerHasResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerCompetitionRecord">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/DeletePlayerCompetitionRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove_BlitzResults">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/Remove_BlitzResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerBlitzResultInit">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/AddPlayerBlitzResultInit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneBlitzResult">
+      <soap:operation soapAction="http://tempuri.org/ITSGS_CS_WCF_Service/UpdateOneBlitzResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TSGS_CS_WCF_Service">
+    <wsdl:port name="BasicHttpBinding_ITSGS_CS_WCF_Service" binding="tns:BasicHttpBinding_ITSGS_CS_WCF_Service">
+      <soap:address location="http://localhost:49892/TSGS_CS_WCF_Service" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

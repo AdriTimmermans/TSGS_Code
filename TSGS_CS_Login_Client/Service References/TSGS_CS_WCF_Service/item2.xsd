@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TSGS_CS_WCF_Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TSGS_CS_WCF_Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GamesData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Competitie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Witspeler" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Zwartspeler" type="xs:int" />
+      <xs:element minOccurs="0" name="Matchpoints_Black" type="xs:float" />
+      <xs:element minOccurs="0" name="Matchpoints_White" type="xs:float" />
+      <xs:element minOccurs="0" name="NumberChampionsgroupGame" type="xs:int" />
+      <xs:element minOccurs="0" name="Pairing_Status_Level" type="xs:int" />
+      <xs:element minOccurs="0" name="Rondernr" type="xs:int" />
+      <xs:element minOccurs="0" name="Sorteerwaarde" type="xs:int" />
+      <xs:element minOccurs="0" name="Wedstrijdresultaat" type="xs:int" />
+      <xs:element minOccurs="0" name="Wedstrijdtype" type="xs:int" />
+      <xs:element minOccurs="0" name="Wit_Remise" type="xs:float" />
+      <xs:element minOccurs="0" name="Wit_Verlies" type="xs:float" />
+      <xs:element minOccurs="0" name="Wit_Winst" type="xs:float" />
+      <xs:element minOccurs="0" name="Zwart_Remise" type="xs:float" />
+      <xs:element minOccurs="0" name="Zwart_Verlies" type="xs:float" />
+      <xs:element minOccurs="0" name="Zwart_Winst" type="xs:float" />
+      <xs:element minOccurs="0" name="record_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GamesData" nillable="true" type="tns:GamesData" />
+  <xs:complexType name="AccessData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Huidige_Gebruiker" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeStamp_Laatste_Load" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccessData" nillable="true" type="tns:AccessData" />
+  <xs:complexType name="CompetitionManager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompetitionManagerId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompetitionManagerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fontsize" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPrivileges" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompetitionManager" nillable="true" type="tns:CompetitionManager" />
+  <xs:complexType name="AbsenteeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Afwezigheidscode" type="xs:int" />
+      <xs:element minOccurs="0" name="Competitie_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Kroongroep_partijnummer" type="xs:int" />
+      <xs:element minOccurs="0" name="NI_Record_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rondenummer" type="xs:int" />
+      <xs:element minOccurs="0" name="Speler_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AbsenteeData" nillable="true" type="tns:AbsenteeData" />
+  <xs:complexType name="PlayerBasicData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Achternaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clublid" type="xs:byte" />
+      <xs:element minOccurs="0" name="Competitie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Deelnemer_teruggetrokken" type="xs:byte" />
+      <xs:element minOccurs="0" name="Doet_mee_met_snelschaak" type="xs:byte" />
+      <xs:element minOccurs="0" name="Email_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIDEnummer" type="xs:int" />
+      <xs:element minOccurs="0" name="FIDErating" type="xs:float" />
+      <xs:element minOccurs="0" name="KNSBnummer" type="xs:int" />
+      <xs:element minOccurs="0" name="KNSBrating" type="xs:float" />
+      <xs:element minOccurs="0" name="Member_Premier_Group" type="xs:byte" />
+      <xs:element minOccurs="0" name="Mobile_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfilePicture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Rapidrating" type="xs:float" />
+      <xs:element minOccurs="0" name="Rating" type="xs:float" />
+      <xs:element minOccurs="0" name="Roepnaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Snelschaakrating" type="xs:float" />
+      <xs:element minOccurs="0" name="Speelt_blitz_sinds_ronde" type="xs:int" />
+      <xs:element minOccurs="0" name="Speelt_mee_sinds_ronde" type="xs:byte" />
+      <xs:element minOccurs="0" name="Speler_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Startrating" type="xs:float" />
+      <xs:element minOccurs="0" name="Team" type="xs:byte" />
+      <xs:element minOccurs="0" name="Telefoonnummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tussenvoegsel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voorletters" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vrijgeloot" type="xs:byte" />
+      <xs:element minOccurs="0" name="Wants_Email" type="xs:byte" />
+      <xs:element minOccurs="0" name="Wants_SMS" type="xs:byte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerBasicData" nillable="true" type="tns:PlayerBasicData" />
+  <xs:complexType name="ResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChampionsgroupGameNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Competitie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Competitie_Resultaat" type="xs:float" />
+      <xs:element minOccurs="0" name="CorrectieOpCompetitie" type="xs:float" />
+      <xs:element minOccurs="0" name="CorrectieOpElo" type="xs:float" />
+      <xs:element minOccurs="0" name="Deelnemer_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ELO_Resultaat" type="xs:float" />
+      <xs:element minOccurs="0" name="Kleur" type="xs:int" />
+      <xs:element minOccurs="0" name="Matchpunten" type="xs:float" />
+      <xs:element minOccurs="0" name="Originele_Kroongroep" type="xs:int" />
+      <xs:element minOccurs="0" name="Partijnaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Plaats_Op_Ranglijst" type="xs:int" />
+      <xs:element minOccurs="0" name="Resultaat" type="xs:int" />
+      <xs:element minOccurs="0" name="Rondedatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Rondernr" type="xs:int" />
+      <xs:element minOccurs="0" name="Tegenstander" type="xs:int" />
+      <xs:element minOccurs="0" name="Was_Downfloat" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Was_Upfloat" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="record_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultData" nillable="true" type="tns:ResultData" />
+  <xs:complexType name="GeneralInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aanmaakdatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Aantal_Unieke_Ronden" type="xs:int" />
+      <xs:element minOccurs="0" name="Aantal_groepen" type="xs:int" />
+      <xs:element minOccurs="0" name="Aantal_ronden" type="xs:int" />
+      <xs:element minOccurs="0" name="Acceleration" type="xs:float" />
+      <xs:element minOccurs="0" name="Bonus_externe_wedstrijden" type="xs:int" />
+      <xs:element minOccurs="0" name="Client_FTP_Host" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_FTP_PW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_FTP_UN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Competitie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Competitie_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentState" type="xs:int" />
+      <xs:element minOccurs="0" name="IntegrateWith" type="xs:int" />
+      <xs:element minOccurs="0" name="Intern_Basis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intern_Competitie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intern_Competitie_Images" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intern_Images" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intern_Template" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KFactor" type="xs:int" />
+      <xs:element minOccurs="0" name="Laatste_ronde" type="xs:int" />
+      <xs:element minOccurs="0" name="Naam_competitie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartijenPerRonde" type="xs:int" />
+      <xs:element minOccurs="0" name="ProfilePicture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Seizoen" type="xs:int" />
+      <xs:element minOccurs="0" name="Standaarddeviatie" type="xs:int" />
+      <xs:element minOccurs="0" name="Strafpunten_afmelden" type="xs:int" />
+      <xs:element minOccurs="0" name="Strafpunten_wegblijven" type="xs:int" />
+      <xs:element minOccurs="0" name="Vereniging" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vrij_afmelden" type="xs:int" />
+      <xs:element minOccurs="0" name="Website_Basis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Competitie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Competitie_Images" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Template" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneralInfo" nillable="true" type="tns:GeneralInfo" />
+  <xs:complexType name="General_Swiss_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aanmaakdatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Aantal_Invoerpunten" type="xs:int" />
+      <xs:element minOccurs="0" name="Aantal_Partijen_Per_Uitslag" type="xs:int" />
+      <xs:element minOccurs="0" name="Aantal_Rating_Groepen" type="xs:int" />
+      <xs:element minOccurs="0" name="Aantal_Ronden" type="xs:int" />
+      <xs:element minOccurs="0" name="Client_FTP_Host" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_FTP_PW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_FTP_UN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Competitie_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentState" type="xs:int" />
+      <xs:element minOccurs="0" name="Decentrale_Invoer_Maximaal" type="xs:int" />
+      <xs:element minOccurs="0" name="Decentrale_Invoer_Spread" type="xs:int" />
+      <xs:element minOccurs="0" name="Hoofdsponsor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Indelings_Modus" type="xs:int" />
+      <xs:element minOccurs="0" name="KFactor" type="xs:int" />
+      <xs:element minOccurs="0" name="Laatste_Ronde" type="xs:int" />
+      <xs:element minOccurs="0" name="PartijenPerRonde" type="xs:int" />
+      <xs:element minOccurs="0" name="ProfilePicture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Restrictie_Rating_Grens" type="xs:int" />
+      <xs:element minOccurs="0" name="Restrictie_Ronden" type="xs:int" />
+      <xs:element minOccurs="0" name="Subsponsors" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Toernooi_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Toernooi_Logo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Toernooi_Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Basis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Competitie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website_Template" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="General_Swiss_Info" nillable="true" type="tns:General_Swiss_Info" />
+  <xs:complexType name="ChampionsgroupData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Competition_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Player_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="StartCompetitionPoints" type="xs:int" />
+      <xs:element minOccurs="0" name="StartRating" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChampionsgroupData" nillable="true" type="tns:ChampionsgroupData" />
+  <xs:complexType name="BlitzResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Competitie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Deelnemer_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Deelnemer_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Groepnummer" type="xs:int" />
+      <xs:element minOccurs="0" name="Matchpunten" type="xs:float" />
+      <xs:element minOccurs="0" name="Rondedatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Rondernr" type="xs:int" />
+      <xs:element minOccurs="0" name="Strafpunten" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlitzResultData" nillable="true" type="tns:BlitzResultData" />
+</xs:schema>

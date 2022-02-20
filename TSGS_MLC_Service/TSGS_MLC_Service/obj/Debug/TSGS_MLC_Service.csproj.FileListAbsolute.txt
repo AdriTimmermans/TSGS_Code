@@ -1,0 +1,5 @@
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_MLC_Service\TSGS_MLC_Service\bin\Debug\TSGS_MLC_Service.dll.config
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_MLC_Service\TSGS_MLC_Service\bin\Debug\TSGS_MLC_Service.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_MLC_Service\TSGS_MLC_Service\bin\Debug\TSGS_MLC_Service.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_MLC_Service\TSGS_MLC_Service\obj\Debug\TSGS_MLC_Service.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_MLC_Service\TSGS_MLC_Service\obj\Debug\TSGS_MLC_Service.pdb

@@ -1,0 +1,112 @@
+        today = new Date()
+rday = Offset_Dagen[iMaandnr] - iDagnr
+        rday = rday + (2007 - iJaarnr) * 365
+day = Offset_Dagen[today.getMonth()+1] - today.getDate()
+        day = day + ((2007 - today.getFullYear()) * 365)
+        day = day - rday
+        hour = iUurnr - 1 -today.getHours()
+        if (hour < 0)
+           {hour = hour + 24
+            day = day - 1}
+        if (day < 0)
+           {iDagnr = iDagnr + 7
+            day = day + 7}
+
+        var minute = 59-today.getMinutes()
+        var second = 59 - today.getSeconds()
+
+        var d3 = day%10
+        var d2 = ((day-d3)/10)%10
+        var d1 = (day-(d2*10)-d3)/100
+        document.d1.src = "" + getImage(d1)
+        document.d2.src = "" + getImage(d2)
+        document.d3.src = "" + getImage(d3)
+
+        var h2 = hour%10
+        var h1 = (hour-h2)/10
+        document.h1.src = "" + getImage(h1)
+        document.h2.src = "" + getImage(h2)
+
+        var m2 = minute%10
+        var m1 = (minute-m2)/10
+        document.m1.src = "" + getImage(m1)
+        document.m2.src = "" + getImage(m2)
+
+        var s2 = second%10
+        var s1 = (second-s2)/10
+        document.s1.src = "" + getImage(s1)
+        document.s2.src = "" + getImage(s2)
+
+var p2 = iDagnr%10
+var p1 = (iDagnr - p2)/10
+document.p1.src = "" + getImage(p1)
+document.p2.src = "" + getImage(p2)
+
+var p4 = iMaandnr%10
+var p3 = (iMaandnr - p4)/10
+document.p3.src = "" + getImage(p3)
+document.p4.src = "" + getImage(p4)
+document.p5.src = "" + getImage(2)
+document.p6.src = "" + getImage(0)
+document.p7.src = "" + getImage(1)
+var p8 = iJaarnr - 2010
+document.p8.src = "" + getImage(p8)
+document.lr.src = "" + getImage(iLr)
+document.nr.src = "" + getImage(iId)
+timerID = setTimeout("Nulpunt()",800)
+return timerID
+}
+// -->
+</script>
+
+<base TARGET="contents">
+</head>
+
+<body BGPROPERTIES="fixed" ONLOAD="Nulpunt()">
+<div align="center"><center>
+
+<table WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+  <tr>
+    <td VALIGN="center"><p ALIGN="center"><font COLOR="navy" SIZE="1" FACE="Arial"><b>Nog</b> </font><!-- $MVD$:picsz("0","0") --><img
+    WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="d1" ><!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="d2" ><!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="d3" > <font COLOR="navy"
+    SIZE="1" FACE="Arial"><b>dagen</b></font> <!-- $MVD$:picsz("0","0") --><img WIDTH="15" HEIGHT="15" HSPACE="0"
+    BORDER="0" LOOP="0" NAME="h1" ><!-- $MVD$:picsz("0","0") --><img WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0"
+    LOOP="0" NAME="h2" > <font COLOR="navy" SIZE="1" FACE="Arial"><b>uur</b></font> <!-- $MVD$:picsz("0","0") --><img
+
+      WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="m1"><!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="m2" > <b><font COLOR="navy"
+    SIZE="1" FACE="Arial">minuten</font> <font COLOR="navy" SIZE="1" FACE="Arial">en</font></b> <!-- $MVD$:picsz("0","0") -->    <img WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="s1" ><!-- $MVD$:picsz("0","0") --><img
+    WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="s2" > <font
+    COLOR="navy" SIZE="1" FACE="Arial"><b>seconden tot de clubavond op</b></font>&nbsp; <!-- $MVD$:picsz("0","0") --><img
+
+      WIDTH="15" HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p1"
+     ><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p2" > <!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p3" ><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p4" > <!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+
+      HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p5"><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p6" ><!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p7" ><!-- $MVD$:picsz("0","0") --><img WIDTH="15"
+    HEIGHT="15" HSPACE="0" BORDER="0" LOOP="0" NAME="p8" > <!-- $MVD$:picsz("0","0") --></p></td>
+  </tr>
+  <tr>
+    <td VALIGN="center"><p ALIGN="center"><font SIZE="2"><small><font FACE="Comic Sans MS"><b><font
+    COLOR="olive">Nieuwtjes? stuur ze naar de webmaster via "Nieuwsbericht
+    aanmelden" hiernaast.</font></b></font></small> &nbsp;<A href="../mainpage.htm"
+    target="main"> <b><i>terug naar startpagina</i></A> </B></font><br>
+    <font COLOR="black"><small>
+    <font FACE="Comic Sans MS"><b><font SIZE="2">Resultaten ronde<!-- $MVD$:picsz("25","25") --><IMG height=15 hspace=0loop=0  width=15 border=0 name="lr" >
+    &nbsp;verwerkt; indeling ronde <IMG height=15 hspace=0 loop=0 width=15 border=0      name="nr">&nbsp;beschikbaar&nbsp;</FONT></STRONG>&nbsp;&nbsp;&nbsp; </small></font><font
+      SIZE="2" COLOR="red"><b>&nbsp;&nbsp; LET OP: afmelden via 06 28 79 18 45 of bij de <a Href="../afmelden.htm" target="main">wedstrijdleider intern</a></b></font></p></td>
+  </tr>
+</table>
+</center></div>
+
+<p ALIGN="center"><!-- $MVD$:spaceretainer() -->&nbsp;</p>
+
+<p ALIGN="center"><!-- $MVD$:spaceretainer() -->&nbsp; </p>
+</body>
+</html>

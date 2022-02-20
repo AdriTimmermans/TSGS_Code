@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfR+cbFd9rkKvZLNf753lSwAAAAACAAAAAAAQZgAAAAEAACAAAACX3TFDdd96Pq0hUUkOLcE0eRDcSz0tY3ftKXWefWraWAAAAAAOgAAAAAIAACAAAAC37gRDQ+sZVSCxzclsJ3FdBUJSTc1rmAcRrBOyNQvi/yAAAABu+sEYURGrA/Mne/lzhPtzhatC3N/rt41Ha5o8kafrukAAAAAD93TYjnR1q6LgkyTZDCKzD9bLx74r9xTSB38EzSdu+mXuT452O8t2k8IdOFfMpJpF5B1AHtoAuCmdkghEponE</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp.tsgsadministration.nl/tsgsadministration.nl/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/TSGS_CS_Login_Client.dll">
+      <publishTime>05/16/2016 08:57:14</publishTime>
+    </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>09/12/2015 14:53:04</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/22/2015 23:02:02</publishTime>
+    </File>
+    <File Include="images/backgroundcs.png">
+      <publishTime>09/11/2015 19:16:22</publishTime>
+    </File>
+    <File Include="images/cshome.png">
+      <publishTime>10/04/2015 01:24:42</publishTime>
+    </File>
+    <File Include="images/Delete-icon.png">
+      <publishTime>12/26/2015 02:21:20</publishTime>
+    </File>
+    <File Include="images/delete.png">
+      <publishTime>12/21/2015 12:56:50</publishTime>
+    </File>
+    <File Include="images/done2.jpg">
+      <publishTime>07/28/2015 11:08:14</publishTime>
+    </File>
+    <File Include="images/edit.png">
+      <publishTime>12/21/2015 12:56:50</publishTime>
+    </File>
+    <File Include="images/Finished.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/folder-full-add-icon.png">
+      <publishTime>12/26/2015 02:26:18</publishTime>
+    </File>
+    <File Include="images/hlp.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/home.jpg">
+      <publishTime>08/29/2015 06:32:34</publishTime>
+    </File>
+    <File Include="images/images.jpg">
+      <publishTime>10/04/2015 01:08:58</publishTime>
+    </File>
+    <File Include="images/INDGREEN.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/INDRED.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/manager.png">
+      <publishTime>12/21/2015 12:56:56</publishTime>
+    </File>
+    <File Include="images/nofoto.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/nofoto.png">
+      <publishTime>12/21/2015 12:56:58</publishTime>
+    </File>
+    <File Include="images/notdone2.jpg">
+      <publishTime>12/20/2015 23:51:34</publishTime>
+    </File>
+    <File Include="images/Open-folder-search-icon.png">
+      <publishTime>01/02/2016 17:26:52</publishTime>
+    </File>
+    <File Include="images/OVZGREEN.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/OVZRED.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/Person_CoffeeBreak_Male_Dark.png">
+      <publishTime>10/01/2015 16:11:34</publishTime>
+    </File>
+    <File Include="images/RESGREEN.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/RESRED.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/scdlogo.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/scdlogodoorzichtig.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/transp.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/TSGSLogo.png">
+      <publishTime>10/03/2015 13:51:22</publishTime>
+    </File>
+    <File Include="images/undercon.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/update.png">
+      <publishTime>12/21/2015 12:56:58</publishTime>
+    </File>
+    <File Include="images/watson.gif">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/WWWGREEN.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="images/WWWRED.bmp">
+      <publishTime>07/28/2015 16:51:26</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataSet.datasource">
+      <publishTime>07/25/2015 18:42:00</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Web.UI.WebControls.Button.datasource">
+      <publishTime>09/23/2015 04:17:56</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Web.UI.WebControls.TextBox.datasource">
+      <publishTime>12/28/2015 03:07:10</publishTime>
+    </File>
+    <File Include="Service References/TSGS_CS_WCF_Service/TSGS_CS_Login_Client.TSGS_CS_WCF_Service.CompetitionManager.datasource">
+      <publishTime>01/03/2016 16:22:16</publishTime>
+    </File>
+    <File Include="Service References/TSGS_CS_WCF_Service/TSGS_CS_Login_Client.TSGS_CS_WCF_Service.GeneralInfo.datasource">
+      <publishTime>01/03/2016 16:22:16</publishTime>
+    </File>
+    <File Include="Service References/TSGS_CS_WCF_Service/TSGS_CS_Login_Client.TSGS_CS_WCF_Service.PlayerBasicData.datasource">
+      <publishTime>01/03/2016 16:22:16</publishTime>
+    </File>
+    <File Include="templates/modern.css">
+      <publishTime>12/30/2015 17:27:14</publishTime>
+    </File>
+    <File Include="TSGS_CS_Adjust_Pairing.aspx">
+      <publishTime>12/28/2015 07:16:46</publishTime>
+    </File>
+    <File Include="TSGS_CS_Blitz_Capture_Results.aspx">
+      <publishTime>11/21/2015 07:49:56</publishTime>
+    </File>
+    <File Include="TSGS_CS_Capture_Results.aspx">
+      <publishTime>12/28/2015 10:55:06</publishTime>
+    </File>
+    <File Include="TSGS_CS_Championsgroup_Overview.aspx">
+      <publishTime>10/19/2015 14:28:06</publishTime>
+    </File>
+    <File Include="TSGS_CS_Championsgroup_Schema.aspx">
+      <publishTime>10/18/2015 05:17:46</publishTime>
+    </File>
+    <File Include="TSGS_CS_Competition_Overall_Status.aspx">
+      <publishTime>10/01/2015 06:47:20</publishTime>
+    </File>
+    <File Include="TSGS_CS_Competition_System_System_Monitor.aspx">
+      <publishTime>01/06/2016 16:44:00</publishTime>
+    </File>
+    <File Include="TSGS_CS_Correction_Player_Data.aspx">
+      <publishTime>10/01/2015 06:47:08</publishTime>
+    </File>
+    <File Include="TSGS_CS_Correction_Player_Data_Details.aspx">
+      <publishTime>01/02/2016 07:41:48</publishTime>
+    </File>
+    <File Include="TSGS_CS_Correct_Player_Results.aspx">
+      <publishTime>10/05/2015 14:24:36</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Blitz_Competition_Ranking.aspx">
+      <publishTime>11/22/2015 16:43:04</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Blitz_ELO_List.aspx">
+      <publishTime>10/29/2015 17:03:50</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Blitz_Results.aspx">
+      <publishTime>10/26/2015 16:29:32</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Competition_List.aspx">
+      <publishTime>10/01/2015 06:47:08</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_ELO_List.aspx">
+      <publishTime>12/18/2015 08:05:32</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Gain_List.aspx">
+      <publishTime>10/01/2015 06:47:12</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Games.aspx">
+      <publishTime>10/01/2015 06:47:14</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Participant_List.aspx">
+      <publishTime>12/18/2015 08:39:24</publishTime>
+    </File>
+    <File Include="TSGS_CS_Display_Personal_Scores_Selection.aspx">
+      <publishTime>10/03/2015 16:00:18</publishTime>
+    </File>
+    <File Include="TSGS_CS_Generate_New_Pairing.aspx">
+      <publishTime>10/01/2015 06:47:20</publishTime>
+    </File>
+    <File Include="TSGS_CS_Go_To_Previous_Round.aspx">
+      <publishTime>12/28/2015 10:38:46</publishTime>
+    </File>
+    <File Include="TSGS_CS_Initialise_Next_Round.aspx">
+      <publishTime>12/28/2015 10:38:48</publishTime>
+    </File>
+    <File Include="TSGS_CS_Link_Player.aspx">
+      <publishTime>10/24/2015 07:52:26</publishTime>
+    </File>
+    <File Include="TSGS_CS_Login_Page.aspx">
+      <publishTime>10/05/2015 17:07:28</publishTime>
+    </File>
+    <File Include="TSGS_CS_Manage_TEAM_References.aspx">
+      <publishTime>12/28/2015 05:44:14</publishTime>
+    </File>
+    <File Include="TSGS_CS_Master.Master">
+      <publishTime>12/21/2015 06:01:00</publishTime>
+    </File>
+    <File Include="TSGS_CS_Non_Clubcompetition_Players.aspx">
+      <publishTime>10/22/2015 09:51:38</publishTime>
+    </File>
+    <File Include="TSGS_CS_Players_With_Bye_List.aspx">
+      <publishTime>12/31/2015 04:52:10</publishTime>
+    </File>
+    <File Include="TSGS_CS_Player_Entry_Form.aspx">
+      <publishTime>12/13/2015 06:54:22</publishTime>
+    </File>
+    <File Include="TSGS_CS_Process_Tournament_Parameters.aspx">
+      <publishTime>12/22/2015 17:47:56</publishTime>
+    </File>
+    <File Include="TSGS_CS_Select_Competition.aspx">
+      <publishTime>12/20/2015 17:02:52</publishTime>
+    </File>
+    <File Include="TSGS_CS_Setup_New_Competition.aspx">
+      <publishTime>10/15/2015 04:09:54</publishTime>
+    </File>
+    <File Include="TSGS_CS_Stats.aspx">
+      <publishTime>12/31/2015 06:00:28</publishTime>
+    </File>
+    <File Include="TSGS_CS_Status_Line.aspx">
+      <publishTime>08/29/2015 06:44:46</publishTime>
+    </File>
+    <File Include="TSGS_CS_Update_Header_Info.aspx">
+      <publishTime>12/29/2015 08:45:12</publishTime>
+    </File>
+    <File Include="TSGS_CS_Update_Rating_Bonden.aspx">
+      <publishTime>01/02/2016 18:42:10</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/16/2016 08:49:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

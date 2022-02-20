@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TSGS_CS_Master.master.cs" Inherits="TSGS_CS_Login_Client.TSGS_CS_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TSGS Administration System</title>
+    <link href="templates/modern.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 70%;
+        }
+
+        .auto-style2 {
+            width: 5%;
+        }
+
+        .auto-style3 {
+            width: 132px;
+            height: 132px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" method="post" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+       <div class="newStyle1">
+            <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="18pt">Label</asp:Label>
+            <table style="width: 100%;">
+                <tr>
+                    <td class="auto-style1">
+                        <asp:Label ID="Label2" runat="server" BackColor="Transparent" Font-Names="Arial" Font-Size="14pt">Nog niet ingevuld.</asp:Label>
+                    </td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td style="text-align: right">
+                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/cshome.png" OnClick="ImageButton3_Click" Height="40px" />&nbsp;&nbsp;
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/Nld.jpg" OnClick="ImageButton2_Click" />&nbsp;&nbsp;
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Eng.jpg" OnClick="ImageButton1_Click" />
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <asp:Timer runat="server" ID="Timer1" Interval="500" OnTick="Timer1_Tick" />
+        <asp:UpdatePanel ID="TimePanel" runat="server" UpdateMode="Conditional">
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+            </Triggers>
+            <ContentTemplate>
+                <div class="newStyle2">
+                    <table class="csheader">
+                        <tr>
+                            <td style="width :5%">
+                                    <asp:Image ID="Image5" runat="server" Width="60px" Height="60px" ImageUrl="~/images/TSGSLogo.png"></asp:Image></td>
+                            </td>
+                            <td style="text-align: right; width :90%">
+                                <asp:Label ID="Label7" runat="server">Competition manager &nbsp;</asp:Label>
+                            </td>
+                            <td style="text-align: right; width :5%">
+                                <asp:Image ID="Image6" runat="server" Width="60px" Height="60px" ImageUrl="~/images/Manager.png"></asp:Image>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="csheader">
+                        <tr>
+                            <td style="width: 40%">
+                                <asp:Label ID="Label5" runat="server">No club, no competition selected</asp:Label></td>
+
+                            <td style="text-align: right; width= 60%">
+                                <asp:Label ID="lbl_csc_Status_Line_Ronde" runat="server">Ronde:</asp:Label>&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label6" runat="server">Indeling:</asp:Label>
+                                <asp:Image ID="Image1" runat="server" Width="16px" Height="16px" ImageUrl="~/images/INDRED.bmp"></asp:Image>
+                                <asp:Label ID="lbl_csc_Status_Line_Resultaten" runat="server">Uitslagen</asp:Label>
+                                <asp:Image ID="Image2" runat="server" Width="16px" Height="16px" ImageUrl="~/images/RESRED.bmp"></asp:Image>
+                                <asp:Label ID="Label4" runat="server">Overzicht</asp:Label>
+                                <asp:Image ID="Image4" runat="server" Width="16px" Height="16px" ImageUrl="~/images/OVZRED.bmp"></asp:Image>
+                                <asp:Label ID="Label3" runat="server">Gepubliceerd</asp:Label>
+                                <asp:Image ID="Image3" runat="server" Width="16px" Height="16px" ImageUrl="~/images/WWWRED.bmp"></asp:Image>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+    </form>
+
+</body>
+</html>

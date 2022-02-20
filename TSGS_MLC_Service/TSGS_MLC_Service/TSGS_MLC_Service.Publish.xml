@@ -1,0 +1,41 @@
+<publishData>
+  <publishTarget publishUrl="\\WEBSITESERVER\Users\Adri\Documents\TSGSDeployment\TSGS_CS_MLC_2019\">
+    <file relUrl="TSGS_MLC_Service.TSGS_MLC_Service.svc" publishTime="01/04/2019 15:14:58" />
+    <file relUrl="ITSGS_MLC_Service.cs" publishTime="05/17/2018 16:03:25" />
+    <file relUrl="bin/TSGS_MLC_Service.dll.config" publishTime="01/04/2019 14:08:41" />
+    <file relUrl="bin/TSGS_MLC_Service.pdb" publishTime="01/04/2019 15:14:44" />
+    <file relUrl="TSGS_MLC_Service.csproj" publishTime="05/09/2018 07:58:51" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="06/09/2018 22:41:37" />
+    <file relUrl="App.config" publishTime="01/04/2019 14:08:41" />
+    <file relUrl="TSGS_MLC_Service.cs" publishTime="05/18/2018 18:56:44" />
+    <file relUrl="Web.config" publishTime="01/04/2019 14:08:41" />
+    <file relUrl="bin/TSGS_MLC_Service.dll" publishTime="01/04/2019 15:14:44" />
+    <file relUrl="TSGS_MLC_Service.csproj.user" publishTime="01/04/2019 15:14:43" />
+  </publishTarget>
+  <publishTarget publishUrl="\\WEBSITESERVER\Users\Adri\Documents\TSGSDeployment\TSGS_MLC_Service_Site\">
+    <file relUrl="Web.config" publishTime="09/13/2018 16:29:44" />
+    <file relUrl="TSGS_MLC_Service.cs" publishTime="05/18/2018 18:56:44" />
+    <file relUrl="bin/TSGS_MLC_Service.dll.config" publishTime="09/13/2018 16:29:44" />
+    <file relUrl="TSGS_MLC_Service.csproj" publishTime="05/09/2018 07:58:51" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="06/09/2018 22:41:37" />
+    <file relUrl="App.config" publishTime="09/13/2018 16:29:44" />
+    <file relUrl="ITSGS_MLC_Service.cs" publishTime="05/17/2018 16:03:25" />
+    <file relUrl="bin/TSGS_MLC_Service.pdb" publishTime="11/12/2018 18:11:36" />
+    <file relUrl="bin/TSGS_MLC_Service.dll" publishTime="11/12/2018 18:11:36" />
+    <file relUrl="TSGS_MLC_Service.csproj.user" publishTime="11/12/2018 18:11:35" />
+    <file relUrl="TSGS_MLC_Service.TSGS_MLC_Service.svc" publishTime="11/12/2018 21:04:05" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:50105/">
+    <file relUrl="TSGS_MLC_Service.TSGS_MLC_Service.svc" publishTime="08/22/2016 23:31:27" />
+    <file relUrl="ITSGS_MLC_Service.cs" publishTime="06/04/2016 22:12:38" />
+    <file relUrl="bin/TSGS_MLC_Service.dll.config" publishTime="06/21/2016 15:16:02" />
+    <file relUrl="TSGS_MLC_Service.csproj" publishTime="06/05/2016 01:41:21" />
+    <file relUrl="Web.config" publishTime="06/21/2016 15:16:02" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="06/04/2016 19:42:05" />
+    <file relUrl="App.config" publishTime="06/21/2016 15:16:02" />
+    <file relUrl="TSGS_MLC_Service.cs" publishTime="08/21/2016 23:09:31" />
+    <file relUrl="bin/TSGS_MLC_Service.pdb" publishTime="08/22/2016 23:31:26" />
+    <file relUrl="bin/TSGS_MLC_Service.dll" publishTime="08/22/2016 23:31:26" />
+    <file relUrl="TSGS_MLC_Service.csproj.user" publishTime="08/22/2016 22:49:06" />
+  </publishTarget>
+</publishData>

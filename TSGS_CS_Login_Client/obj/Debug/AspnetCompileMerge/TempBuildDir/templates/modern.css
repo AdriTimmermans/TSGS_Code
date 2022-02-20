@@ -1,0 +1,84 @@
+﻿body {
+    
+	margin: 0px auto;
+	width: 0px auto;
+    background-image: url("../images/backgroundcs.png");
+    /*background-color: #EAEAD4;*/
+	font-family : Arial, Verdana, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom:120px;
+	}
+
+div.newStyle1 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(239,243,251, 0.6);
+    position: absolute;
+/*    margin:20px; */
+    padding:20px;
+    clip: rect(auto, auto, auto, auto);
+    top: 150px;
+/*    left: 100px; */
+    width: 1000px;
+    margin:0 10%;
+    height: auto;
+    }
+
+div.newStyle2 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    vertical-align: middle;
+/*    left: 100px; */
+    height:65px;
+    width: 1040px;
+    margin:0 10%;
+    background-color: rgba(239,243,251, 0.6);
+    }
+
+div.centered {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+table.csheader{
+    width:1040px;
+}
+
+label.mediumsize {
+	font-family : Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+div.zoekspeler {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #EFF3FB;
+    position: absolute;
+    margin:20px;
+    padding:20px;
+    clip: rect(auto, auto, auto, auto);
+    top: 125px;
+    left: 300px;
+    width: 675px;
+    height: auto;
+    }
+
+div.zoekFIDEspeler {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #EFF3FB;
+    position: absolute;
+    margin:20px;
+    padding:20px;
+    clip: rect(auto, auto, auto, auto);
+    top: 525px;
+    left: 300px;
+    width: 675px;
+    height: auto;
+    }
+div.AppSize {
+    font-size: 18px;
+}
+td.AppSize{
+    font-size: 18px;
+}
+.center_align { text-align: center}

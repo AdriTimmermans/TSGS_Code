@@ -1,0 +1,1 @@
+<%@ ServiceHost Service="TSGS_CS_WCF_Service.TSGS_CS_WCF_Service" %>

@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B621C4E-B591-4033-B92B-CFF272F653CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSGS_CS_Login_Client</RootNamespace>
+    <AssemblyName>TSGS_CS_Login_Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="images\Eng.jpg" />
+    <None Include="images\Nld.jpg" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\backgroundcs.png" />
+    <Content Include="images\cshome.png" />
+    <Content Include="images\Delete-icon.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\DIY_worried_smiley.jpg" />
+    <Content Include="images\done2.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\Finished.bmp" />
+    <Content Include="images\folder-full-add-icon.png" />
+    <Content Include="images\hlp.gif" />
+    <Content Include="images\home.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\INDGREEN.bmp" />
+    <Content Include="images\INDRED.bmp" />
+    <Content Include="images\manager.png" />
+    <Content Include="images\newmessages.jpg" />
+    <Content Include="images\nofoto.gif" />
+    <Content Include="images\nofoto.png" />
+    <Content Include="images\nomessages.jpg" />
+    <Content Include="images\notdone2.jpg" />
+    <Content Include="images\Open-folder-search-icon.png" />
+    <Content Include="images\OVZGREEN.bmp" />
+    <Content Include="images\OVZRED.bmp" />
+    <Content Include="images\Person_CoffeeBreak_Male_Dark.png" />
+    <Content Include="images\RESGREEN.bmp" />
+    <Content Include="images\RESRED.bmp" />
+    <Content Include="images\scdlogo.gif" />
+    <Content Include="images\scdlogodoorzichtig.gif" />
+    <Content Include="images\smiley-vector-happy-face.jpg" />
+    <Content Include="images\sub_black_rotate_cw.png" />
+    <Content Include="images\target.jpg" />
+    <Content Include="images\target.png" />
+    <Content Include="images\transp.gif" />
+    <Content Include="images\TSGSLogo.png" />
+    <Content Include="images\undercon.gif" />
+    <Content Include="images\unselect.jpg" />
+    <Content Include="images\update.png" />
+    <Content Include="images\watson.gif" />
+    <Content Include="images\WWWGREEN.bmp" />
+    <Content Include="images\WWWRED.bmp" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\System.Web.UI.WebControls.Button.datasource" />
+    <Content Include="Properties\DataSources\System.Web.UI.WebControls.TextBox.datasource" />
+    <None Include="Properties\PublishProfiles\TSGSAdministration_One.pubxml" />
+    <None Include="Properties\PublishProfiles\TSGS_Client.pubxml" />
+    <Content Include="Global.asax" />
+    <None Include="Service References\TSGS_CS_WCF_Service\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSGS_CS_WCF_Service\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSGS_CS_WCF_Service\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSGS_CS_WCF_Service\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.AccessData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.CompetitionManager.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.GeneralInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.General_Swiss_Info.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.PlayerBasicData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.ValidateIntegerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.ValidateRealResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_Login_Client.TSGS_CS_WCF_Service.ValidateStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service.wsdl" />
+    <None Include="Service References\TSGS_CS_WCF_Service\item.disco" />
+    <None Include="Service References\TSGS_CS_WCF_Service\configuration91.svcinfo" />
+    <None Include="Service References\TSGS_CS_WCF_Service\configuration.svcinfo" />
+    <None Include="Service References\TSGS_CS_WCF_Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TSGS_MLC_Service\configuration91.svcinfo" />
+    <None Include="Service References\TSGS_MLC_Service\configuration.svcinfo" />
+    <None Include="Service References\TSGS_MLC_Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="templates\modern.css" />
+    <Content Include="TSGS_CS_Adjust_Pairing.aspx" />
+    <Content Include="TSGS_CS_Blitz_Capture_Results.aspx" />
+    <Content Include="TSGS_CS_Capture_Results.aspx" />
+    <Content Include="TSGS_CS_Championsgroup_Overview.aspx" />
+    <Content Include="TSGS_CS_Championsgroup_Schema.aspx" />
+    <Content Include="TSGS_CS_Cleanup.aspx" />
+    <Content Include="TSGS_CS_Competition_Overall_Status.aspx" />
+    <Content Include="TSGS_CS_Competition_System_System_Monitor.aspx" />
+    <Content Include="TSGS_CS_Correction_Player_Data.aspx" />
+    <Content Include="TSGS_CS_Correction_Player_Data_Details.aspx" />
+    <Content Include="TSGS_CS_Correct_Player_Results.aspx" />
+    <Content Include="TSGS_CS_Create_email_to_application_manager.aspx" />
+    <Content Include="TSGS_CS_Default_Absence.aspx" />
+    <Content Include="TSGS_CS_Display_MobileMessages.aspx" />
+    <Content Include="TSGS_CS_Display_Blitz_Competition_Ranking.aspx" />
+    <Content Include="TSGS_CS_Display_Blitz_ELO_List.aspx" />
+    <Content Include="TSGS_CS_Display_Blitz_Results.aspx" />
+    <Content Include="TSGS_CS_Display_Championsgroup_Schedule.aspx" />
+    <Content Include="TSGS_CS_Display_Competition_List.aspx" />
+    <Content Include="TSGS_CS_Display_ELO_List.aspx" />
+    <Content Include="TSGS_CS_Display_Gain_List.aspx" />
+    <Content Include="TSGS_CS_Display_Games.aspx" />
+    <Content Include="TSGS_CS_Display_Alarm_Panel.aspx" />
+    <Content Include="TSGS_CS_Display_Participant_List.aspx" />
+    <Content Include="TSGS_CS_Display_Personal_Scores_Selection.aspx" />
+    <Content Include="TSGS_CS_Generate_New_Pairing.aspx" />
+    <Content Include="TSGS_CS_Go_To_Previous_Round.aspx" />
+    <Content Include="TSGS_CS_Initialise_Next_Round.aspx" />
+    <Content Include="TSGS_CS_Link_Player.aspx" />
+    <Content Include="TSGS_CS_Login_Page.aspx" />
+    <Content Include="TSGS_CS_Manage_TEAM_References.aspx" />
+    <Content Include="TSGS_CS_Non_Clubcompetition_Players.aspx" />
+    <Content Include="TSGS_CS_Players_With_Bye_List.aspx" />
+    <Content Include="TSGS_CS_Player_Entry_Form.aspx" />
+    <Content Include="TSGS_CS_Process_Tournament_Parameters.aspx" />
+    <Content Include="TSGS_CS_Select_Competition.aspx" />
+    <Content Include="TSGS_CS_Setup_New_Competition.aspx" />
+    <Content Include="TSGS_CS_Show_One_Game_History.aspx" />
+    <Content Include="TSGS_CS_Stats.aspx" />
+    <Content Include="TSGS_CS_Status_Line.aspx" />
+    <Content Include="TSGS_CS_Update_Header_Info.aspx" />
+    <Content Include="TSGS_CS_Update_Rating_Bonden.aspx" />
+    <Content Include="TSGS_ZS_Attendance_Registration.aspx" />
+    <Content Include="TSGS_ZS_Byes.aspx" />
+    <Content Include="TSGS_ZS_Capture_Results.aspx" />
+    <Content Include="TSGS_ZS_Connect_To_Tournament.aspx" />
+    <Content Include="TSGS_ZS_Correction_Withdraw_Round.aspx" />
+    <Content Include="TSGS_ZS_Correct_Pairing.aspx" />
+    <Content Include="TSGS_ZS_Correct_Player_Data.aspx" />
+    <Content Include="TSGS_ZS_Correct_Results.aspx" />
+    <Content Include="TSGS_ZS_Display_List_Gain_Loss.aspx" />
+    <Content Include="TSGS_ZS_Display_List_Game_Points.aspx" />
+    <Content Include="TSGS_ZS_Display_Pairing_Board.aspx" />
+    <Content Include="TSGS_ZS_Display_Pairing_Participant.aspx" />
+    <Content Include="TSGS_ZS_Display_Participants.aspx" />
+    <Content Include="TSGS_ZS_Display_Personal_Scores.aspx" />
+    <Content Include="TSGS_ZS_FIDE_Tournament_Report.aspx" />
+    <Content Include="TSGS_ZS_Pairing.aspx" />
+    <Content Include="TSGS_ZS_Prepare_Norm_Documentation.aspx" />
+    <Content Include="TSGS_ZS_Prepare_Prize_Letters.aspx" />
+    <Content Include="TSGS_ZS_Pubtournament_Module.aspx" />
+    <Content Include="TSGS_ZS_Tournament_Parameters.aspx" />
+    <Content Include="TSGS_ZS_Waiting_for_Results.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Class_PairingListdata.cs" />
+    <Compile Include="Service References\TSGS_CS_WCF_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSGS_MLC_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Adjust_Pairing.aspx.cs">
+      <DependentUpon>TSGS_CS_Adjust_Pairing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Adjust_Pairing.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Adjust_Pairing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Blitz_Capture_Results.aspx.cs">
+      <DependentUpon>TSGS_CS_Blitz_Capture_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Blitz_Capture_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Blitz_Capture_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Capture_Results.aspx.cs">
+      <DependentUpon>TSGS_CS_Capture_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Capture_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Capture_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Championsgroup_Overview.aspx.cs">
+      <DependentUpon>TSGS_CS_Championsgroup_Overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Championsgroup_Overview.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Championsgroup_Overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Championsgroup_Schema.aspx.cs">
+      <DependentUpon>TSGS_CS_Championsgroup_Schema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Championsgroup_Schema.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Championsgroup_Schema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Cleanup.aspx.cs">
+      <DependentUpon>TSGS_CS_Cleanup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Cleanup.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Cleanup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Correct_Player_Results.aspx.cs">
+      <DependentUpon>TSGS_CS_Correct_Player_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Correct_Player_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Correct_Player_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Create_email_to_application_manager.aspx.cs">
+      <DependentUpon>TSGS_CS_Create_email_to_application_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Create_email_to_application_manager.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Create_email_to_application_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Default_Absence.aspx.cs">
+      <DependentUpon>TSGS_CS_Default_Absence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Default_Absence.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Default_Absence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_MobileMessages.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_MobileMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_MobileMessages.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_MobileMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_Competition_Ranking.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_Competition_Ranking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_Competition_Ranking.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_Competition_Ranking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_ELO_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_ELO_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_ELO_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_ELO_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_Results.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Blitz_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Blitz_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Championsgroup_Schedule.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Championsgroup_Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Championsgroup_Schedule.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Championsgroup_Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Competition_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Competition_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Competition_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Competition_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_ELO_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_ELO_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_ELO_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_ELO_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Gain_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Gain_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Gain_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Gain_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Alarm_Panel.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Alarm_Panel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Alarm_Panel.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Alarm_Panel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Participant_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Participant_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Participant_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Participant_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Personal_Scores_Selection.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Personal_Scores_Selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Personal_Scores_Selection.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Personal_Scores_Selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Extention_Methods.cs" />
+    <Compile Include="TSGS_CS_Format_Controls.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TSGS_CS_Competition_Overall_Status.aspx.cs">
+      <DependentUpon>TSGS_CS_Competition_Overall_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Competition_Overall_Status.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Competition_Overall_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Competition_System_System_Monitor.aspx.cs">
+      <DependentUpon>TSGS_CS_Competition_System_System_Monitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Competition_System_System_Monitor.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Competition_System_System_Monitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Correction_Player_Data.aspx.cs">
+      <DependentUpon>TSGS_CS_Correction_Player_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Correction_Player_Data.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Correction_Player_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Correction_Player_Data_Details.aspx.cs">
+      <DependentUpon>TSGS_CS_Correction_Player_Data_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Correction_Player_Data_Details.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Correction_Player_Data_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Games.aspx.cs">
+      <DependentUpon>TSGS_CS_Display_Games.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Display_Games.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Display_Games.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Generate_New_Pairing.aspx.cs">
+      <DependentUpon>TSGS_CS_Generate_New_Pairing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Generate_New_Pairing.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Generate_New_Pairing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Go_To_Previous_Round.aspx.cs">
+      <DependentUpon>TSGS_CS_Go_To_Previous_Round.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Go_To_Previous_Round.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Go_To_Previous_Round.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Initialise_Next_Round.aspx.cs">
+      <DependentUpon>TSGS_CS_Initialise_Next_Round.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Initialise_Next_Round.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Initialise_Next_Round.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Link_Player.aspx.cs">
+      <DependentUpon>TSGS_CS_Link_Player.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Link_Player.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Link_Player.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Login_Page.aspx.cs">
+      <DependentUpon>TSGS_CS_Login_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Login_Page.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Login_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Manage_TEAM_References.aspx.cs">
+      <DependentUpon>TSGS_CS_Manage_TEAM_References.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Manage_TEAM_References.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Manage_TEAM_References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Master.Master.cs">
+      <DependentUpon>TSGS_CS_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Master.Master.designer.cs">
+      <DependentUpon>TSGS_CS_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Non_Clubcompetition_Players.aspx.cs">
+      <DependentUpon>TSGS_CS_Non_Clubcompetition_Players.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Non_Clubcompetition_Players.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Non_Clubcompetition_Players.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Players_With_Bye_List.aspx.cs">
+      <DependentUpon>TSGS_CS_Players_With_Bye_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Players_With_Bye_List.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Players_With_Bye_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Player_Entry_Form.aspx.cs">
+      <DependentUpon>TSGS_CS_Player_Entry_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Player_Entry_Form.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Player_Entry_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Process_Tournament_Parameters.aspx.cs">
+      <DependentUpon>TSGS_CS_Process_Tournament_Parameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Process_Tournament_Parameters.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Process_Tournament_Parameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Select_Competition.aspx.cs">
+      <DependentUpon>TSGS_CS_Select_Competition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Select_Competition.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Select_Competition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Setup_New_Competition.aspx.cs">
+      <DependentUpon>TSGS_CS_Setup_New_Competition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Setup_New_Competition.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Setup_New_Competition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Show_One_Game_History.aspx.cs">
+      <DependentUpon>TSGS_CS_Show_One_Game_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Show_One_Game_History.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Show_One_Game_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Stats.aspx.cs">
+      <DependentUpon>TSGS_CS_Stats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Stats.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Status_Line.aspx.cs">
+      <DependentUpon>TSGS_CS_Status_Line.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Status_Line.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Status_Line.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Update_Header_Info.aspx.cs">
+      <DependentUpon>TSGS_CS_Update_Header_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Update_Header_Info.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Update_Header_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Update_Rating_Bonden.aspx.cs">
+      <DependentUpon>TSGS_CS_Update_Rating_Bonden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_CS_Update_Rating_Bonden.aspx.designer.cs">
+      <DependentUpon>TSGS_CS_Update_Rating_Bonden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_CS_Utilities.cs" />
+    <Compile Include="TSGS_ZS_Attendance_Registration.aspx.cs">
+      <DependentUpon>TSGS_ZS_Attendance_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Attendance_Registration.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Attendance_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Byes.aspx.cs">
+      <DependentUpon>TSGS_ZS_Byes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Byes.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Byes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Capture_Results.aspx.cs">
+      <DependentUpon>TSGS_ZS_Capture_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Capture_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Capture_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Connect_To_Tournament.aspx.cs">
+      <DependentUpon>TSGS_ZS_Connect_To_Tournament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Connect_To_Tournament.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Connect_To_Tournament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correction_Withdraw_Round.aspx.cs">
+      <DependentUpon>TSGS_ZS_Correction_Withdraw_Round.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correction_Withdraw_Round.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Correction_Withdraw_Round.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Pairing.aspx.cs">
+      <DependentUpon>TSGS_ZS_Correct_Pairing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Pairing.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Correct_Pairing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Player_Data.aspx.cs">
+      <DependentUpon>TSGS_ZS_Correct_Player_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Player_Data.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Correct_Player_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Results.aspx.cs">
+      <DependentUpon>TSGS_ZS_Correct_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Correct_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Correct_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_List_Gain_Loss.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_List_Gain_Loss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_List_Gain_Loss.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_List_Gain_Loss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_List_Game_Points.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_List_Game_Points.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_List_Game_Points.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_List_Game_Points.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Pairing_Board.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_Pairing_Board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Pairing_Board.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_Pairing_Board.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Pairing_Participant.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_Pairing_Participant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Pairing_Participant.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_Pairing_Participant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Participants.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_Participants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Participants.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_Participants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Personal_Scores.aspx.cs">
+      <DependentUpon>TSGS_ZS_Display_Personal_Scores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Display_Personal_Scores.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Display_Personal_Scores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_FIDE_Tournament_Report.aspx.cs">
+      <DependentUpon>TSGS_ZS_FIDE_Tournament_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_FIDE_Tournament_Report.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_FIDE_Tournament_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Pairing.aspx.cs">
+      <DependentUpon>TSGS_ZS_Pairing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Pairing.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Pairing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Prepare_Norm_Documentation.aspx.cs">
+      <DependentUpon>TSGS_ZS_Prepare_Norm_Documentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Prepare_Norm_Documentation.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Prepare_Norm_Documentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Prepare_Prize_Letters.aspx.cs">
+      <DependentUpon>TSGS_ZS_Prepare_Prize_Letters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Prepare_Prize_Letters.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Prepare_Prize_Letters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Pubtournament_Module.aspx.cs">
+      <DependentUpon>TSGS_ZS_Pubtournament_Module.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Pubtournament_Module.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Pubtournament_Module.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Tournament_Parameters.aspx.cs">
+      <DependentUpon>TSGS_ZS_Tournament_Parameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Tournament_Parameters.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Tournament_Parameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSGS_ZS_Waiting_for_Results.aspx.cs">
+      <DependentUpon>TSGS_ZS_Waiting_for_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TSGS_ZS_Waiting_for_Results.aspx.designer.cs">
+      <DependentUpon>TSGS_ZS_Waiting_for_Results.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TSGS_CS_Master.Master" />
+    <None Include="Service References\TSGS_MLC_Service\TSGS_MLC_Service.wsdl" />
+    <None Include="Service References\TSGS_MLC_Service\TSGS_MLC_Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSGS_MLC_Service\TSGS_MLC_Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSGS_MLC_Service\TSGS_MLC_Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="htmlfiles\0\" />
+    <Folder Include="htmlfiles\54\" />
+    <Folder Include="htmlfiles\55\" />
+    <Folder Include="htmlfiles\56\" />
+    <Folder Include="htmlfiles\57\" />
+    <Folder Include="htmlfiles\58\" />
+    <Folder Include="htmlfiles\59\" />
+    <Folder Include="workfiles\" />
+    <Folder Include="workimages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TSGS_CS_WCF_Service\" />
+    <WCFMetadataStorage Include="Service References\TSGS_MLC_Service\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49213</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49250/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:49250/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll.config
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.pdb
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.dll
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.pdb
+Z:\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.csprojResolveAssemblyReference.cache
+\\LS-GL95E\usbdisk1\SchaakclubDordrecht\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll.config
+\\LS-GL95E\usbdisk1\SchaakclubDordrecht\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll
+\\LS-GL95E\usbdisk1\SchaakclubDordrecht\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.pdb
+\\LS-GL95E\usbdisk1\SchaakclubDordrecht\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.dll
+\\LS-GL95E\usbdisk1\SchaakclubDordrecht\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.pdb
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll.config
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.pdb
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.csprojResolveAssemblyReference.cache
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.dll
+Z:\TSGS_CS_WCF_Client\TSGS_CS_Login_Client\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll.config
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\bin\TSGS_CS_Login_Client.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\bin\AjaxControlToolkit.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.csprojResolveAssemblyReference.cache
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_Login_Client\obj\Debug\TSGS_CS_Login_Client.pdb

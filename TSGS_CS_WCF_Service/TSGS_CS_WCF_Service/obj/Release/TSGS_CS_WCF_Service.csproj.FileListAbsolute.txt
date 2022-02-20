@@ -1,0 +1,6 @@
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\bin\Release\TSGS_CS_WCF_Service.dll.config
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\bin\Release\TSGS_CS_WCF_Service.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\bin\Release\TSGS_CS_WCF_Service.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\obj\Release\TSGS_CS_WCF_Service.dll
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\obj\Release\TSGS_CS_WCF_Service.pdb
+C:\Users\Adri\Documents\Visual Studio 2013\Projects\TSGS_Code\TSGS_CS_WCF_Service\TSGS_CS_WCF_Service\obj\Release\TSGS_CS_WCF_Service.csprojResolveAssemblyReference.cache

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      </assemblies>
+    </compilation>
+    <httpRuntime executionTimeout="540" maxRequestLength="3048000"/>
+    <sessionState mode="InProc" timeout="10" regenerateExpiredSessionId="false" />
+  </system.web>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_ITSGS_MLC_Service" />
+        <binding name="BasicHttpBinding_ITSGS_CS_WCF_Service" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://websiteserver/TSGS_MLC_Service/TSGS_MLC_Service.TSGS_MLC_Service.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITSGS_MLC_Service"
+        contract="TSGS_MLC_Service.ITSGS_MLC_Service" name="BasicHttpBinding_ITSGS_MLC_Service" />
+      <endpoint address="http://localhost:49892/TSGS_CS_WCF_Service.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITSGS_CS_WCF_Service"
+        contract="TSGS_CS_WCF_Service.ITSGS_CS_WCF_Service" name="BasicHttpBinding_ITSGS_CS_WCF_Service" />
+    </client>
+  </system.serviceModel>
+</configuration>

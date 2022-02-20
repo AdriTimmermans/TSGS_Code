@@ -1,0 +1,434 @@
+-- =============================================
+-- Author:		Adri
+-- Create date: 03/9/2015
+-- Description:	Get last round
+-- =============================================
+CREATE PROCEDURE [dbo].[spFreeRoundPlayers] 
+	-- Add the parameters for the stored procedure here
+	@CID int,
+	@RNR int
+AS
+BEGIN
+Declare @Aantal_Vrij int
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON
+
+    -- Insert statements for procedure here
+	select @Aantal_Vrij=Count([Speler_Id]) from [dbo].[tbl_temp_list] where [Competition_Id]=@CID and [Round_Number]=@RNR And Round_Free=0;
+	IF @Aantal_Vrij = 0
+	Begin
+		Update Deelnemers Set Vrijgeloot=0 where Speler_id in
+		(Select Player_Id from Deelnemer_Competitie Where [Competition_Id]=@CID);
+		Update [dbo].[tbl_temp_list] set Round_Free=0;
+	End
+	select top 1 Speler_Id as FreeGame from [dbo].[tbl_temp_list] where [Competition_Id]=@CID and [Round_Number]=@RNR And Round_Free=0 and [Current_Rating]<1950 Order By NEWID();
+END
+-- =============================================
+-- Author:		Adri
+-- Create date: 07/30/2015
+-- Description:	Ophalen van alle spelers in een competitie
+-- =============================================
+CREATE PROCEDURE [dbo].[spGetPlayerList] 
+	-- Add the parameters for the stored procedure here
+	@CompetitionId int = 0
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON
+	DECLARE
+	@Komma nvarchar(3) = ', ',
+	@Spatie nvarchar(3) = ' ',
+	@HaakOpen nvarchar(3) = ' (',
+	@HaakSluiten nvarchar(3) = ') '
+    -- Insert statements for procedure here
+	 IF @CompetitionId = 0
+		 BEGIN
+			SELECT [Speler_ID], RTRIM([Achternaam])+@Komma+RTRIM([Voorletters])+@Spatie+RTRIM([Tussenvoegsel])+@HaakOpen+RTRIM([Roepnaam])+@HaakSluiten AS SpelerNaam, [Telefoonnummer], [Team] [Competition_Id], [Vrijgeloot], [Member_Premier_Group]
+			FROM [CompetitieSCD].[dbo].[Deelnemers]
+			WHERE [Speler_ID]>0 
+			ORDER BY [Achternaam] ASC, Voorletters ASC
+		 END
+	ELSE
+		BEGIN
+			SELECT [Speler_ID], RTRIM([Achternaam])+@Komma+RTRIM([Voorletters])+@Spatie+RTRIM([Tussenvoegsel])+@HaakOpen+RTRIM([Roepnaam])+@HaakSluiten AS SpelerNaam, [Telefoonnummer], [Team], [Competition_Id], [Vrijgeloot], [Member_Premier_Group]
+			FROM [CompetitieSCD].[dbo].[View_PlayerListperCompetition]
+			WHERE ([Competition_Id]=@CompetitionId) AND [Speler_ID]>0 
+			ORDER BY [Achternaam] ASC, Voorletters ASC
+		END
+END
+
+CREATE procedure [dbo].[spSaveOneResult]
+@RNR int, 
+@PID int, 
+@CID int, 
+@PRL int, 
+@TID int, 
+@COL int, 
+@RES int, 
+@ERES float, 
+@CRES float, 
+@COE float, 
+@COC float, 
+@PAN nvarchar (50),
+@CGN int,
+@WUF int,
+@WDF int
+
+as
+Begin
+	declare @COT int = 0;
+
+	Insert into Competitieresultaat
+	(Rondenr, Deelnemer_ID, Competitie_Id, Rondedatum, Plaats_Op_Ranglijst, Tegenstander, Kleur, Resultaat, ELOResultaat, CompetitieResultaat, CorrectieOpElo, CorrectieOpCompetitie, Partijnaam, KroongroepPartijNummer, Was_Upfloat, Was_Downfloat)
+	values (@RNR, @PID, @CID, GetDate(), @PRL, @TID, @COL, @RES, @ERES, @CRES, @COE, @COC, @PAN, @CGN, @WUF, @WDF)
+
+	Select @COT = Competitie_Type from Algemene_Info where Competitie_Id=@CID;
+
+	if (@COT != 3)
+	Begin
+		if (@RES=13)
+		Begin
+		Update [dbo].[Deelnemers] Set [Vrijgeloot]=1, [Datum_Vrijgeloot]=GetDate() where Speler_ID=@PID
+		End
+	End
+End
+
+CREATE procedure [dbo].[spSavePlayerData]
+           @Competitie_Id int,
+		   @Titel nvarchar(10),
+		   @Achternaam nvarchar(50),
+           @Tussenvoegsel nvarchar(50),
+           @Voorletters nvarchar(20),
+           @Roepnaam nvarchar(50),
+           @KNSBnummer int,
+		   @FIDEnummer int,
+           @Telefoonnummer nvarchar(50),
+           @Rating float,
+		   @KNSBRating float,
+		   @FIDERating float,
+           @Snelschaakrating float,
+           @Rapidrating float,
+           @Startrating float,
+           @Team tinyint,
+           @Clublid bit,
+           @Deelnemer_teruggetrokken bit,
+           @Speelt_mee_sinds_ronde tinyint,
+           @Doet_mee_met_snelschaak bit,
+           @Speelt_blitz_sinds_ronde int,
+           @Vrijgeloot bit,
+           @Wants_Email bit,
+           @Email_Address char(40),
+           @Wants_SMS bit,
+           @Mobile_Number char(15),
+           @Member_Premier_Group bit,
+		   @ProfilePicture image
+
+as
+Begin
+	DECLARE
+@highest_id int
+ 
+INSERT INTO [dbo].[Deelnemers]
+           ([Competitie_Id]
+		   ,[Titel]
+		   ,[Achternaam]
+           ,[Tussenvoegsel]
+           ,[Voorletters]
+           ,[Roepnaam]
+           ,[KNSBnummer]
+           ,[Telefoonnummer]
+           ,[Team]
+           ,[Clublid]
+           ,[Deelnemer_teruggetrokken]
+           ,[Speelt_mee_sinds_ronde]
+           ,[Doet_mee_met_snelschaak]
+           ,[Speelt_blitz_sinds_ronde]
+           ,[Vrijgeloot]
+           ,[Wants_Email]
+           ,[Email_Address]
+           ,[Wants_SMS]
+           ,[Mobile_Number]
+           ,[Member_Premier_Group]
+		   ,[ProfilePicture]
+		   ,[FIDENummer]
+		   ,[Datum_Vrijgeloot])
+     VALUES
+           (0,
+		    @Titel,
+		    @Achternaam, 
+            @Tussenvoegsel,
+            @Voorletters, 
+            @Roepnaam, 
+            @KNSBnummer,
+            @Telefoonnummer,
+            @Team, 
+            @Clublid,
+            @Deelnemer_teruggetrokken, 
+            @Speelt_mee_sinds_ronde, 
+            @Doet_mee_met_snelschaak, 
+            @Speelt_blitz_sinds_ronde,
+            1,
+            @Wants_Email, 
+            @Email_Address, 
+            @Wants_SMS,
+            @Mobile_Number,
+            @Member_Premier_Group,
+			@ProfilePicture,
+			@FIDEnummer,
+			GetDate());
+
+	SELECT @highest_id = MAX([dbo].[Deelnemers].[Speler_Id]) FROM [dbo].[Deelnemers];
+
+	if (@Competitie_ID != 0)
+	Begin
+		INSERT INTO [dbo].Deelnemer_Competitie ([Player_Id], [Competition_Id], [StartRating], [StartCompetitionPoints]) VALUES (@highest_id, @Competitie_Id, @Rating, @Rating);
+	end
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 1, @Rating, getdate());
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 2, @KNSBRating, getdate());
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 3, @FIDERating, getdate());
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 4, @Snelschaakrating, getdate());
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 5, @Rapidrating, getdate());
+	insert into [dbo].[Deelnemer_Rating_Info] ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@highest_id, 8, @Rating, getdate());
+End
+
+-- =============================================
+-- Author:		Adri
+-- Create date: 09/8/2015
+-- Description:	update workflow
+-- =============================================
+CREATE PROCEDURE [dbo].[spUpdatePlayerData] 
+	-- Add the parameters for the stored procedure here
+		   @Player_Id int,
+           @Competitie_Id int,
+		   @Titel nvarchar(10),
+		   @Achternaam nvarchar(50),
+           @Tussenvoegsel nvarchar(50),
+           @Voorletters nvarchar(20),
+           @Roepnaam nvarchar(50),
+           @KNSBnummer int,
+		   @KNSBrating float,
+		   @FIDEnummer int,
+		   @FIDErating float,
+           @Telefoonnummer nvarchar(50),
+           @Startrating float,
+           @Rating float,
+           @Snelschaakrating float,
+           @StartCompetitiepunten float,
+           @Team tinyint,
+           @Clublid bit,
+           @Deelnemer_teruggetrokken bit,
+           @Speelt_mee_sinds_ronde tinyint,
+           @Doet_mee_met_snelschaak bit,
+           @Speelt_blitz_sinds_ronde int,
+           @Rapidrating float,
+           @Vrijgeloot bit,
+           @Wants_Email bit,
+           @Email_Address char(40),
+           @Wants_SMS bit,
+           @Mobile_Number char(15),
+           @Member_Premier_Group bit,
+		   @ProfilePicture image
+
+AS
+BEGIN
+	DECLARE
+	@points float
+
+  IF exists (Select 1 from Deelnemers where Speler_ID=@Player_Id)
+	  BEGIN
+			  UPDATE Deelnemers
+			  SET  [Competitie_Id]=0,
+				   [Titel]=@Titel,	
+				   [Achternaam]=@Achternaam,	
+				   [Tussenvoegsel] = @Tussenvoegsel,
+				   [Voorletters] = @Voorletters,
+				   [Roepnaam] = @Roepnaam,
+				   [KNSBNummer] = @KNSBnummer,
+				   [Telefoonnummer] = @Telefoonnummer,
+				   [Team] = @Team,
+				   [Clublid] = @Clublid,
+				   [Deelnemer_teruggetrokken] = @Deelnemer_teruggetrokken,
+				   [Speelt_mee_sinds_ronde] = @Speelt_mee_sinds_ronde,
+				   [Doet_mee_met_snelschaak] = @Doet_mee_met_snelschaak,
+				   [Speelt_blitz_sinds_ronde] = @Speelt_blitz_sinds_ronde,
+				   [Vrijgeloot] = @Vrijgeloot,
+				   [Wants_Email] = @Wants_Email,
+				   [Email_Address] = @Email_Address,
+				   [Wants_SMS] = @Wants_SMS,
+				   [Mobile_Number] = @Mobile_Number,
+				   [Member_Premier_Group] = @Member_Premier_Group,
+				   [ProfilePicture] = @ProfilePicture,
+				   [FIDENummer] = @FIDEnummer
+		   	  WHERE Speler_ID = @Player_Id
+	  END
+  ELSE
+	  -- Insert new item
+	  BEGIN
+		  INSERT INTO [dbo].[Deelnemers]
+           ([Competitie_Id]
+		   ,[Titel]
+		   ,[Achternaam]
+           ,[Tussenvoegsel]
+           ,[Voorletters]
+           ,[Roepnaam]
+           ,[KNSBnummer]
+           ,[Telefoonnummer]
+           ,[Team]
+           ,[Clublid]
+           ,[Deelnemer_teruggetrokken]
+           ,[Speelt_mee_sinds_ronde]
+           ,[Doet_mee_met_snelschaak]
+           ,[Speelt_blitz_sinds_ronde]
+           ,[Vrijgeloot]
+           ,[Wants_Email]
+           ,[Email_Address]
+           ,[Wants_SMS]
+           ,[Mobile_Number]
+           ,[Member_Premier_Group]
+		   ,[ProfilePicture]
+		   ,[FIDENummer]
+		   ,[Datum_Vrijgeloot])
+     VALUES
+           (0,
+		    @Titel,
+		    @Achternaam, 
+            @Tussenvoegsel,
+            @Voorletters, 
+            @Roepnaam, 
+            @KNSBnummer,
+            @Telefoonnummer,
+            @Team, 
+            @Clublid,
+            @Deelnemer_teruggetrokken, 
+            @Speelt_mee_sinds_ronde, 
+            @Doet_mee_met_snelschaak, 
+            @Speelt_blitz_sinds_ronde,
+            @Vrijgeloot,
+            @Wants_Email, 
+            @Email_Address, 
+            @Wants_SMS,
+            @Mobile_Number,
+            @Member_Premier_Group,
+			@ProfilePicture,
+			@FIDEnummer,
+			GetDate());
+
+	  END
+
+  IF (@Rating != 0)
+  Begin
+	  IF exists (Select * from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=1)
+		Begin
+			Select top 1 @points = [RatingPoints] from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=1 order by RatingUpdated DESC;
+			if (@points != @Rating)
+			  Begin
+				INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 1, @Rating, getdate());
+				Insert into [CompetitieSCD].[dbo].[Logging] (User_ID, Dated, CID, Module, Debuglevel, DebugLevelValue, MessageLine) Values ('SP', Getdate(), @Competitie_Id, 'spUpdatePlayerData', 'Info', 4, 'Insert Rating_info -rating:'+convert(varchar, @Rating));
+			  end
+		End
+	  Else
+		Begin
+			INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 1, @Rating, getdate());
+		End
+  End
+
+  IF (@KNSBRating != 0)
+  Begin
+	  IF exists (Select * from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=2)
+		Begin
+			Select top 1 @points = [RatingPoints] from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=2 order by RatingUpdated DESC;
+			if (@points != @KNSBrating)
+			  Begin
+				INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 2, @KNSBrating, getdate());
+			  end
+		End
+	  Else
+		Begin
+			INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 2, @KNSBrating, getdate());
+		End
+  End
+
+  IF (@FIDERating != 0)
+  Begin
+	  IF exists (Select * from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=3)
+		Begin
+			Select top 1 @points = [RatingPoints] from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=3 order by RatingUpdated DESC;
+			if (@points != @FIDErating)
+			  Begin
+				INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 3, @FIDErating, getdate());
+			  end
+		End
+	  Else
+		Begin
+			INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 3, @FIDErating, getdate());
+		End
+  End
+
+  IF (@SnelschaakRating != 0)
+  Begin
+	  IF exists (Select * from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=4)
+		Begin
+			Select top(1) @points = [RatingPoints] from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=4 order by RatingUpdated DESC;
+			if (@points != @Snelschaakrating)
+			  Begin
+				INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 4, @SnelschaakRating, getdate());
+			  end
+		End
+	  Else
+		Begin
+			INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 4, @SnelschaakRating, getdate());
+		End
+  End
+
+  IF (@Rapidrating != 0)
+  Begin  
+	  IF exists (Select * from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=5)
+		Begin
+			Select top(1) @points = [RatingPoints] from Deelnemer_Rating_Info where PlayerId=@Player_Id and RatingType=5 order by RatingUpdated DESC;
+			if (@points != @Rapidrating)
+			  Begin
+				INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 5, @RapidRating, getdate());
+			  end
+		End
+	  Else
+		Begin
+			INSERT INTO [dbo].Deelnemer_Rating_Info ([PlayerId], [RatingType], [RatingPoints], [RatingUpdated]) VALUES (@Player_Id, 5, @RapidRating, getdate());
+		End
+  End
+  if (@team <> 0)
+  begin
+     delete from Deelnemer_Team where Deelnemer=@Player_Id and Team_nr=0;
+  end
+
+  IF exists (Select * from Deelnemer_Team where Deelnemer=@Player_Id and Club_Id='140010')
+	Begin
+		if (@team = 0)
+		  begin
+		     delete from Deelnemer_Team where Deelnemer=@Player_Id;
+		  end
+		else
+		  Begin
+		  IF not exists (Select * from Deelnemer_Team where Deelnemer=@Player_Id and Club_Id='140010' and Team_nr=@team)
+		    Begin
+				INSERT INTO [dbo].Deelnemer_Team ([Deelnemer], Club_Id, Team_nr) VALUES (@Player_Id, '140010', @team);
+			end
+		  end
+	End
+  Else
+	Begin
+		INSERT INTO [dbo].Deelnemer_Team ([Deelnemer], Club_Id, Team_nr) VALUES (@Player_Id, '140010', @team);
+	End
+
+
+END
+
+CREATE VIEW dbo.View_PlayerListperCompetition
+AS
+SELECT        dbo.Deelnemers.Speler_ID, dbo.Deelnemers.Achternaam, dbo.Deelnemers.Tussenvoegsel, dbo.Deelnemers.Voorletters, dbo.Deelnemers.Telefoonnummer, 
+                         dbo.Deelnemers.Team, dbo.Deelnemer_Competitie.Competition_Id, dbo.Deelnemers.Roepnaam, dbo.Deelnemers.Deelnemer_teruggetrokken, 
+                         dbo.Deelnemers.Vrijgeloot, dbo.Deelnemers.Member_Premier_Group, dbo.Deelnemer_Competitie.Lotnumber, dbo.Deelnemers.Wants_Email, 
+                         dbo.Deelnemers.Email_Address, dbo.Deelnemers.KNSBnummer, dbo.Deelnemers.FIDEnummer, dbo.Deelnemers.Datum_Vrijgeloot
+FROM            dbo.Deelnemers INNER JOIN
+                         dbo.Deelnemer_Competitie ON dbo.Deelnemers.Speler_ID = dbo.Deelnemer_Competitie.Player_Id

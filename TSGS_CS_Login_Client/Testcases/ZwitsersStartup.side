@@ -1,0 +1,74 @@
+{
+  "id": "b518af91-f3f6-4c27-9c1e-5ab6d13e8014",
+  "name": "ZwitsersStartup",
+  "url": "http://localhost:49250/TSGS_CS_Competition_System_System_Monitor.aspx",
+  "tests": [{
+    "id": "187767da-1964-44e2-8c3e-9084a55aa581",
+    "name": "LoginAdriTimmermans",
+    "commands": [{
+      "id": "f2bf4e61-7a27-48d9-bee9-8a4d5735881d",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=ContentPlaceHolder1_Button2",
+      "value": "194,15"
+    }, {
+      "id": "2d671baf-1cc5-4fdd-9734-ac235b852a3b",
+      "comment": "",
+      "command": "type",
+      "target": "id=ContentPlaceHolder1_TextBox12",
+      "value": "Adri Timmermans"
+    }, {
+      "id": "9483b293-6188-48ca-af2e-1ba9f8b91937",
+      "comment": "",
+      "command": "type",
+      "target": "id=ContentPlaceHolder1_TextBox13",
+      "value": "M@rk1403"
+    }, {
+      "id": "d94f0d09-2b3c-4bca-8f20-fdd71c003d5a",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=ContentPlaceHolder1_Button1",
+      "value": "107,13"
+    }, {
+      "id": "b5da7dab-c787-4159-8d3e-3828b8007c6d",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=ContentPlaceHolder1_Button5",
+      "value": "125,10"
+    }, {
+      "id": "d5d923de-4817-469c-83ca-75ac172be8d7",
+      "comment": "",
+      "command": "clickAt",
+      "target": "name=ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00",
+      "value": "10,14"
+    }, {
+      "id": "718d573f-d6be-4b01-9f7d-a2b1a5beb73d",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=html",
+      "value": "1359,726"
+    }, {
+      "id": "9affe1e9-7304-4125-96ae-8cb9b71056bc",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=ContentPlaceHolder1_Button18",
+      "value": "278,11"
+    }, {
+      "id": "de6659cc-55d2-48fe-9f5c-351e0c078981",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=ContentPlaceHolder1_Button42",
+      "value": "36,17"
+    }]
+  }],
+  "suites": [{
+    "id": "e429d39c-81f9-489f-b592-93a4c28de87a",
+    "name": "Default Suite",
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["187767da-1964-44e2-8c3e-9084a55aa581"]
+  }],
+  "urls": ["http://localhost:49250/", "http://localhost:49250/TSGS_CS_Competition_System_System_Monitor.aspx"],
+  "plugins": [],
+  "version": "1.0"
+}
